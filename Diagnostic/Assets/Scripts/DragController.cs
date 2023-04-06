@@ -62,7 +62,7 @@ public class DragController : MonoBehaviour
     }
     
     void drag () {
-        _lastDragged.transform.position = new Vector2(_worldPosition.x, _worldPosition.y);
+        _lastDragged.transform.position = new Vector3(_worldPosition.x, _worldPosition.y);
     }
 
     void drop () {
