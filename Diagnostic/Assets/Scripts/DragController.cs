@@ -68,6 +68,4 @@ public class DragController : MonoBehaviour
     void drop () {
         _isDragActive = false;
     }
-
-
 }

@@ -9,12 +9,10 @@ public class couleur : MonoBehaviour
     static Color[] colours = new Color[] { Color.white, Color.red, Color.green, Color.blue };
     static private int currentColor;
     // Use this for initialization
-
     
-
     public void Change(Image objet)
     {
-        Debug.Log("Papamericano");
+        Debug.Log("Change couleur");
         if (!(currentColor == colours.Length - 1))
         {
             currentColor = (currentColor + 1) % colours.Length;
