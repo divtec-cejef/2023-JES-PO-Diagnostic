@@ -9,6 +9,7 @@ public class DragController : MonoBehaviour
     private Vector2 _screenPosition;
     private Vector3 _worldPosition;
     private Draggable _lastDragged;
+    private Vector3 basePosition;
 
     void Awake() {
         DragController[] dragControllers = FindObjectsOfType<DragController>();
@@ -18,7 +19,7 @@ public class DragController : MonoBehaviour
     }
 
     /**
-    * Pemet de déplacer un objet en le touchant
+    * Permet de déplacer un objet en le touchant
     */
     void Update()
     { 
@@ -58,6 +59,7 @@ public class DragController : MonoBehaviour
 
     void initDrag()
     {
+        basePosition = _lastDragged.transform.position;
         _isDragActive = true;
     }
     
@@ -67,6 +69,7 @@ public class DragController : MonoBehaviour
 
     void drop () {
         _isDragActive = false;
+        _lastDragged.transform.position = basePosition;
     }
 
 
