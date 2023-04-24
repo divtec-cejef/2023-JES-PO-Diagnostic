@@ -8,8 +8,8 @@ public class nettoyage : MonoBehaviour, IPointerExitHandler
 {
     public Image targetImage; // L'image qui doit passer sur l'autre pour nettoyer l'autre image
     public Image changeImage; // L'image qui doit être nettoyée
-    public List<Color> listeCouleurs; 
-    static private int currentColor;
+    public List<Color> listeCouleurs = new List<Color>(); // Liste des couleurs qui doivent être utilisées pour nettoyer l'image
+    static private int currentColor; // Couleur actuelle
     // Use this for initialization
 
     // Cherche deux GameObjects dans la scène Unity en utilisant leur nom 
@@ -17,12 +17,29 @@ public class nettoyage : MonoBehaviour, IPointerExitHandler
     // Ces deux images sont stockées dans les variables "targetImage" et "changeImage".
     private void Start()
     {
-        listeCouleurs.Add(new Color(255, 92, 96)); 
-        listeCouleurs.Add(new Color(254, 7, 13));
-        listeCouleurs.Add(new Color(177, 0, 4));
-        listeCouleurs.Add(new Color(120, 0, 2)); 
+        // Créer un dégradé de rouge allant du plus clair au plus foncé
+        Color color1 = new Color(1.0f, 0.8f, 0.8f); // Rouge très clair
+        Color color2 = new Color(1.0f, 0.6f, 0.6f); // Rouge clair
+        Color color3 = new Color(1.0f, 0.4f, 0.4f); // Rouge moyen
+        Color color4 = new Color(1.0f, 0.2f, 0.2f); // Rouge foncé
+        Color color5 = new Color(0.8f, 0.0f, 0.0f); // Rouge très foncé
+        Color color6 = new Color(0.0f, 0.0f, 1.0f); // Bleu
+
+        // Ajouter les couleurs à la liste
+        listeCouleurs.Add(color1);
+        listeCouleurs.Add(color2);
+        listeCouleurs.Add(color3);
+        listeCouleurs.Add(color4);
+        listeCouleurs.Add(color5);
+        listeCouleurs.Add(color6);
+
         targetImage = GameObject.Find("Circle").GetComponent<Image>();
         changeImage = GameObject.Find("Carre").GetComponent<Image>();
+
+        foreach (Color couleur in listeCouleurs)
+        {
+            Debug.Log(couleur);
+        }
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -73,10 +90,11 @@ public class nettoyage : MonoBehaviour, IPointerExitHandler
         if (!(currentColor == listeCouleurs.Count - 1))
         {
             currentColor = (currentColor + 1) % listeCouleurs.Count;
+            Debug.Log(currentColor);
             changeImage.color = listeCouleurs[currentColor];
         } else
         {
-            changeImage.gameObject.SetActive(false);
+            Debug.Log("Piece nettoye");
         }
     }
 }
