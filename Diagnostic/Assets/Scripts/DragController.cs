@@ -71,6 +71,4 @@ public class DragController : MonoBehaviour
         _isDragActive = false;
         _lastDragged.transform.position = basePosition;
     }
-
-
 }
