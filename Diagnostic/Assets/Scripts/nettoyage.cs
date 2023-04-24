@@ -33,8 +33,8 @@ public class nettoyage : MonoBehaviour, IPointerExitHandler
         listeCouleurs.Add(color5);
         listeCouleurs.Add(color6);
 
-        targetImage = GameObject.Find("Circle").GetComponent<Image>();
-        changeImage = GameObject.Find("Carre").GetComponent<Image>();
+        targetImage = GameObject.Find("Balai").GetComponent<Image>();
+        changeImage = GameObject.Find("Sale").GetComponent<Image>();
 
         foreach (Color couleur in listeCouleurs)
         {
