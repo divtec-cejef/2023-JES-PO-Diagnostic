@@ -23,7 +23,7 @@ public class nettoyage : MonoBehaviour, IPointerExitHandler
         Color color3 = new Color(1.0f, 0.4f, 0.4f); // Rouge moyen
         Color color4 = new Color(1.0f, 0.2f, 0.2f); // Rouge foncé
         Color color5 = new Color(0.8f, 0.0f, 0.0f); // Rouge très foncé
-        Color color6 = new Color(0.0f, 0.0f, 1.0f); // Bleu
+        Color color6 = new Color(0.0f, 1.0f, 0.0f); // Vert pur
 
         // Ajouter les couleurs à la liste
         listeCouleurs.Add(color1);
@@ -34,7 +34,7 @@ public class nettoyage : MonoBehaviour, IPointerExitHandler
         listeCouleurs.Add(color6);
 
         targetImage = GameObject.Find("Balai").GetComponent<Image>();
-        changeImage = GameObject.Find("Sale").GetComponent<Image>();
+        changeImage = GameObject.Find("Green").GetComponent<Image>();
 
         foreach (Color couleur in listeCouleurs)
         {
