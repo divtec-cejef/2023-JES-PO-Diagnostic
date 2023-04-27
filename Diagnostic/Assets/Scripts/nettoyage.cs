@@ -87,16 +87,20 @@ public class nettoyage : MonoBehaviour, IPointerExitHandler
     public void Change(Image changeImage)
     {
         Debug.Log("Change couleur");
-        if (!(currentColor == listeCouleurs.Count - 1))
+        if (currentColor <= listeCouleurs.Count - 2)
         {
             currentColor = (currentColor + 1) % listeCouleurs.Count;
             Debug.Log(currentColor);
             changeImage.color = listeCouleurs[currentColor];
-        } else
+        } else if (currentColor <= listeCouleurs.Count - 1)
         {
+            changeImage.color = Color.green;
             Debug.Log("Piece nettoye");
+            FinNiveau.accompli++;
         }
     }
+
+    
 }
 
 
