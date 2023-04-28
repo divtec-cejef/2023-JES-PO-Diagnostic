@@ -14,9 +14,10 @@ public class couleur : MonoBehaviour, IPointerEnterHandler
     public void OnPointerEnter(PointerEventData eventData)
     {
         Debug.Log("Pointer enter");
-        if (IsCenterOverlapping(outil, composant))
+        if (IsCenterOverlapping(outil, composant) && composant.color != couleurs)
         {
             composant.color = couleurs;
+            FinNiveau.accompli++;
         }
     }
 
