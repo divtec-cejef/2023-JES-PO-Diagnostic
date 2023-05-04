@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class couleur : MonoBehaviour, IPointerEnterHandler
 {
-    public Image outil; // L'image qui doit passer sur l'autre pour nettoyer l'autre image
-    public Image composant; // L'image qui doit être nettoyée
-    public Color couleurs; // Liste des couleurs qui doivent être utilisées pour nettoyer l'image
+    public SpriteRenderer outil; // Le sprite qui doit passer sur l'autre pour nettoyer l'autre sprite
+    public SpriteRenderer composant; // Le sprite qui doit être nettoyé
+    public Color couleurs; // Liste des couleurs qui doivent être utilisées pour nettoyer le sprite
     private int currentColor; // Couleur actuelle
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -17,7 +17,7 @@ public class couleur : MonoBehaviour, IPointerEnterHandler
         if (IsCenterOverlapping(outil, composant) && composant.color != couleurs)
         {
             composant.color = couleurs;
-            FinNiveau.accompli++;
+            Debug.Log("Sprite nettoyé !");
         }
     }
 
@@ -26,11 +26,11 @@ public class couleur : MonoBehaviour, IPointerEnterHandler
         transform.position = Input.mousePosition;
     }
 
-    public bool IsCenterOverlapping(Image image1, Image image2)
+    public bool IsCenterOverlapping(SpriteRenderer sprite1, SpriteRenderer sprite2)
     {
         Debug.Log("IsCenterOverlapping");
-        RectTransform rectTransform1 = image1.GetComponent<RectTransform>();
-        RectTransform rectTransform2 = image2.GetComponent<RectTransform>();
+        RectTransform rectTransform1 = sprite1.GetComponent<RectTransform>();
+        RectTransform rectTransform2 = sprite2.GetComponent<RectTransform>();
 
         Vector2 rect1Center = rectTransform1.anchoredPosition + rectTransform1.rect.center;
         Vector2 rect2Center = rectTransform2.anchoredPosition + rectTransform2.rect.center;

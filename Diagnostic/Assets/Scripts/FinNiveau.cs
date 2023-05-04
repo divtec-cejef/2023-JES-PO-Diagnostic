@@ -9,7 +9,6 @@ public class FinNiveau : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(accompli);
         if (accompli == 3)
         {
             SceneManager.LoadScene(2);
