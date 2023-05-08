@@ -89,7 +89,6 @@ public class DragController : MonoBehaviour
     {
         _isDragActive = false;
         _lastDragged.transform.position = basePosition;
-        Debug.Log("getSmaller");
         _lastDragged.transform.localScale = new Vector3(X, Y, 0f);
     }
 }
