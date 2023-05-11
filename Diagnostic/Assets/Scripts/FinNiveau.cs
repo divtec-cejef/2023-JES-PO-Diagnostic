@@ -1,18 +1,34 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class FinNiveau : MonoBehaviour
 {
-    static public int accompli = 0; // Couleur actuelle
+    public static int Accompli = 0;
+    public GameObject popUp;
+    private DragController _dragController;
+    private Draggable _draggable;
 
-    void Update()
+    private void Start()
     {
-        if (accompli == 3)
+        _dragController = FindObjectOfType<DragController>();
+        _draggable = FindObjectOfType<Draggable>();
+    }
+    private void Update()
+    {
+        if (FinNiveau.Accompli == 3)
         {
-            SceneManager.LoadScene(2);
+            ShowPopUp();
         }
     }
 
+    public void ShowPopUp()
+    {
+        popUp.SetActive(true);
+    }
+
+    public void HidePopUp()
+    {
+        popUp.SetActive(false);
+        _draggable.enabled = false;
+        _dragController.enabled = false;
+    }
 }

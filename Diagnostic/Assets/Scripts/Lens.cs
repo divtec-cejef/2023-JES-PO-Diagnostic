@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class lens : MonoBehaviour
+public class Lens : MonoBehaviour
 {
     [SerializeField]
     private Transform smallSheet, bigSheet;

@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class nettoyage : MonoBehaviour
+public class Nettoyage : MonoBehaviour
 {
     public Image targetImage; // L'image qui doit passer sur l'autre pour nettoyer l'autre image
     public Image changeImage; // L'image qui doit être nettoyée
     public List<Color> listeCouleurs = new List<Color>(); // Liste des couleurs qui doivent être utilisées pour nettoyer l'image
-    static private int currentColor; // Couleur actuelle
+    static private int _currentColor; // Couleur actuelle
     public GameObject otherObject;
     // Use this for initialization
 
@@ -31,12 +31,6 @@ public class nettoyage : MonoBehaviour
         listeCouleurs.Add(color3);
         listeCouleurs.Add(color4);
         listeCouleurs.Add(color5);
-
-        // Parcourir la liste de couleurs et afficher leurs valeurs
-        foreach (Color color in listeCouleurs)
-        {
-            Debug.Log(color);
-        }
     }
 
     void OnCollisionExit()
@@ -69,18 +63,17 @@ public class nettoyage : MonoBehaviour
     public void Change(Image changeImage)
     {
         Debug.Log("Change couleur");
-        if (currentColor < listeCouleurs.Count - 2)
+        if (_currentColor < listeCouleurs.Count - 2)
         {
-            currentColor = (currentColor + 1) % listeCouleurs.Count;
-            Debug.Log(currentColor);
-            changeImage.color = listeCouleurs[currentColor];
+            _currentColor = (_currentColor + 1) % listeCouleurs.Count;
+            Debug.Log(_currentColor);
+            changeImage.color = listeCouleurs[_currentColor];
         }
-        else if (currentColor <= listeCouleurs.Count - 1)
+        else if (_currentColor <= listeCouleurs.Count - 1)
         {
             changeImage.color = Color.green;
             Debug.Log("Piece nettoye");
-            FinNiveau.accompli++;
-            currentColor += 2;
+            _currentColor += 2;
         }
     }
 }
