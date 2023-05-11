@@ -516,7 +516,6 @@ GameObject:
   - component: {fileID: 1665777767}
   - component: {fileID: 1665777766}
   - component: {fileID: 1665777771}
-  - component: {fileID: 1665777770}
   - component: {fileID: 1665777772}
   m_Layer: 5
   m_Name: Carre
@@ -609,18 +608,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1665777763}
   m_CullTransparentMesh: 1
---- !u!114 &1665777770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1665777763}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27df6e8cd6d289a4cba3b5f779462593, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1665777771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -635,7 +622,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetImage: {fileID: 999892539}
   changeImage: {fileID: 1665777767}
-  isDraggable: 0
+  listeCouleurs: []
 --- !u!114 &1665777772
 MonoBehaviour:
   m_ObjectHideFlags: 0

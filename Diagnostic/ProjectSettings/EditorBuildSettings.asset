@@ -11,11 +11,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Accueil.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Drag and drop.unity
     guid: e34b6e54bf9969046a425187ed52b990
   - enabled: 1
-    path: Assets/Scenes/couleur.unity
+    path: Assets/Scenes/Base-game.unity
     guid: 7c5ab3c791803134b84023e73642d040
   - enabled: 1
     path: Assets/Scenes/Bravo.unity

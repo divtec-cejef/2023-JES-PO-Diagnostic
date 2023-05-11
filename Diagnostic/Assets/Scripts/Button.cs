@@ -6,10 +6,15 @@ using UnityEngine.SceneManagement;
 public class Button : MonoBehaviour
 {
     // Start is called before the first frame update
-    public nettoyage nettoyage;
+    
     public void ChangerScene(int sceneID)
     {
         SceneManager.LoadScene(sceneID);
+    }
+
+    public void Quitter()
+    {
+        Application.Quit();
     }
     
     
