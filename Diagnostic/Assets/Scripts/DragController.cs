@@ -1,16 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DragController : MonoBehaviour
 {
-    private bool _isDragActive = false;
+    private bool _isDragActive;
     private Vector2 _screenPosition;
     private Vector3 _worldPosition;
-    public Draggable _lastDragged;
-    private Vector3 basePosition;
-    private float X;
-    private float Y;
+    private DragController _dragController;
+    private Draggable _draggable;
+    public Draggable lastDragged;
+    private Vector3 _basePosition;
+    private float _x;
+    private float _y;
+    
+    private void Start()
+    {
+        _dragController = FindObjectOfType<DragController>();
+        _draggable = FindObjectOfType<Draggable>();
+    }
 
     void Awake()
     {
@@ -31,7 +37,7 @@ public class DragController : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0) || Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Ended)
             {
-                drop();
+                Drop();
                 return;
             }
         }
@@ -50,11 +56,11 @@ public class DragController : MonoBehaviour
             return;
         }
 
-        _worldPosition = Camera.main.ScreenToWorldPoint(_screenPosition);
+        if (Camera.main != null) _worldPosition = Camera.main.ScreenToWorldPoint(_screenPosition);
 
         if (_isDragActive)
         {
-            drag();
+            Drag();
         }
         else
         {
@@ -64,31 +70,43 @@ public class DragController : MonoBehaviour
                 Draggable draggable = hit.collider.GetComponent<Draggable>();
                 if (draggable != null)
                 {
-                    _lastDragged = draggable;
-                    X = _lastDragged.transform.localScale.x;
-                    Y = _lastDragged.transform.localScale.y;
-                    initDrag();
+                    lastDragged = draggable;
+                    var transform1 = lastDragged.transform;
+                    var localScale = transform1.localScale;
+                    _x = localScale.x;
+                    _y = localScale.y;
+                    InitDrag();
                 }
             }
         }
     }
 
-    void initDrag()
+    private void InitDrag()
     {
-        basePosition = _lastDragged.transform.position;
+        var transform1 = lastDragged.transform;
+        _basePosition = transform1.position;
         _isDragActive = true;
-        _lastDragged.transform.localScale = new Vector3(X * 2f, Y * 2f, 0f);   
+        transform1.localScale = new Vector3(_x * 2f, _y * 2f, 0f);   
     }
 
-    void drag()
+    private void Drag()
     {
-        _lastDragged.transform.position = new Vector3(_worldPosition.x - 1, _worldPosition.y + 1);
+        lastDragged.transform.position = new Vector3(_worldPosition.x - 1, _worldPosition.y + 1);
     }
 
-    void drop()
+    public static bool FinDrag = false;
+
+    private void Drop()
     {
         _isDragActive = false;
-        _lastDragged.transform.position = basePosition;
-        _lastDragged.transform.localScale = new Vector3(X, Y, 0f);
+        var transform1 = lastDragged.transform;
+        transform1.position = _basePosition;
+        transform1.localScale = new Vector3(_x, _y, 0f);
+        
+        if (FinDrag)
+        {
+            _draggable.enabled = false;
+            _dragController.enabled = false;
+        }
     }
 }
