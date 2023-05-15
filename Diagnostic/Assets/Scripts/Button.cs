@@ -9,6 +9,7 @@ public class Button : MonoBehaviour
     
     public void ChangerScene(int sceneID)
     {
+        Debug.Log("Click");
         SceneManager.LoadScene(sceneID);
     }
 
