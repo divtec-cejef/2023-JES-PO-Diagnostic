@@ -1,5 +1,4 @@
 # 2023-JES-PO-Diagnostic
-# Bienvenue sur le Wiki du projet "Diagnostic" des portes ouvertes de la DIVTEC 
 
 ## Objectif du projet
 Dans ce projet nous allons développer un jeu à but ludique et éducatif, afin de présenter aux visiteurs les composants d'un PC, leur fonctionnement ainsi que leur importance dans l'ordinateur.
