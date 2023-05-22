@@ -172,10 +172,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31534f9a8e777384db10e6427c4098f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectPrefab: {fileID: 1804707517538081492, guid: 9a1a492c520b024479d4e4791fd7b97e, type: 3}
-  numberOfObjects: 10
-  spawnAreaCenter: {x: 0, y: 0, z: 0}
-  spawnAreaSize: {x: 1500, y: 1500, z: 0}
+  spawnAreaSize: {x: 0, y: 0, z: 0}
+  objectPrefab: {fileID: 0}
+  spawnAreaCenter: {fileID: 0}
+  activate: {fileID: 0}
+  deactivate: {fileID: 0}
 --- !u!1 &1272386619
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,7 +195,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1272386620
 RectTransform:
   m_ObjectHideFlags: 0
@@ -202,7 +203,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1272386619}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 8.896093, y: 8.896093, z: 8.896093}
   m_ConstrainProportionsScale: 1
@@ -743,9 +744,9 @@ GameObject:
   - component: {fileID: 1917190652}
   - component: {fileID: 1917190651}
   - component: {fileID: 1917190650}
-  - component: {fileID: 1917190653}
+  - component: {fileID: 1917190654}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Commencer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -816,9 +817,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1917190653}
-        m_TargetAssemblyTypeName: Button, Assembly-CSharp
-        m_MethodName: Hide
+      - m_Target: {fileID: 1917190654}
+        m_TargetAssemblyTypeName: CpuMiniGame, Assembly-CSharp
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -866,7 +867,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1917190648}
   m_CullTransparentMesh: 1
---- !u!114 &1917190653
+--- !u!114 &1917190654
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -875,12 +876,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1917190648}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03f76a64165e42c449ef3fc2a431cc7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 31534f9a8e777384db10e6427c4098f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneID: 0
-  aActiver: {fileID: 1272386619}
-  aDesactiver: {fileID: 1627721635}
+  spawnAreaSize: {x: 2000, y: 2000, z: 0}
+  objectPrefab: {fileID: 1804707517538081492, guid: 9a1a492c520b024479d4e4791fd7b97e, type: 3}
+  spawnAreaCenter: {fileID: 1272386619}
+  activate: {fileID: 1272386619}
+  deactivate: {fileID: 1627721635}
 --- !u!1 &2003005454
 GameObject:
   m_ObjectHideFlags: 0
