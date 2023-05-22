@@ -10,4 +10,4 @@ Le premier sprint consiste à créer un jeu de base avec trois outils et formes 
 ![image](https://user-images.githubusercontent.com/94681686/235114032-6d3a0d7f-dca6-4791-88f5-bdf70d3fa684.png)
 
 Le deuxième sprint à pour but de mettre en place la fonctionnalité de la loupe. L'objectif est de placer des composants sur la carte mère puis, grâce à la loupe, d'afficher les deux problèmes présents sur ces composants.
-![image](![Capture d'écran 2023-05-22 082325](https://github.com/divtec-cejef/2023-JES-PO-Diagnostic/assets/94681675/6c3d4719-38ae-4f30-9ab0-40a89735ea8a)
+![image](https://github.com/divtec-cejef/2023-JES-PO-Diagnostic/assets/94681675/6c3d4719-38ae-4f30-9ab0-40a89735ea8a)
