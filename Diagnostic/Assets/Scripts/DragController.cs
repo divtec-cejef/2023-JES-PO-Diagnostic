@@ -1,74 +1,110 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class DragController : MonoBehaviour
 {
-    private bool _isDragActive = false;
+    private bool _isDragActive;
     private Vector2 _screenPosition;
     private Vector3 _worldPosition;
-    private Draggable _lastDragged;
-    private Vector3 basePosition;
+    private DragController _dragController;
+    private Draggable _draggable;
+    public Draggable lastDragged;
+    private Vector3 _basePosition;
+    private float _x;
+    private float _y;
+    
+    private void Start()
+    {
+        _dragController = FindObjectOfType<DragController>();
+        _draggable = FindObjectOfType<Draggable>();
+    }
 
-    void Awake() {
+    void Awake()
+    {
         DragController[] dragControllers = FindObjectsOfType<DragController>();
-        if (dragControllers.Length > 1) {
+        if (dragControllers.Length > 1)
+        {
             Destroy(gameObject);
         }
+
     }
 
     /**
     * Permet de déplacer un objet en le touchant
     */
     void Update()
-    { 
-        if(_isDragActive) {
-            if(Input.GetMouseButtonUp(0) || Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Ended) 
+    {
+        if (_isDragActive)
+        {
+            if (Input.GetMouseButtonUp(0) || Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Ended)
             {
-                drop();
+                Drop();
                 return;
             }
         }
 
-        if (Input.GetMouseButton(0)) {
+        if (Input.GetMouseButton(0))
+        {
             Vector3 mousePosition = Input.mousePosition;
             _screenPosition = new Vector2(mousePosition.x, mousePosition.y);
         }
-        else if (Input.touchCount > 0) {
+        else if (Input.touchCount > 0)
+        {
             _screenPosition = Input.GetTouch(0).position;
-        } else {
+        }
+        else
+        {
             return;
         }
 
-        _worldPosition = Camera.main.ScreenToWorldPoint(_screenPosition);
+        if (Camera.main != null) _worldPosition = Camera.main.ScreenToWorldPoint(_screenPosition);
 
-        if(_isDragActive) {
-            drag();
-        } else {
+        if (_isDragActive)
+        {
+            Drag();
+        }
+        else
+        {
             RaycastHit2D hit = Physics2D.Raycast(_worldPosition, Vector2.zero);
-            if (hit.collider != null) {
+            if (hit.collider != null)
+            {
                 Draggable draggable = hit.collider.GetComponent<Draggable>();
-                if (draggable != null) {
-                    _lastDragged = draggable;
-                    initDrag();
+                if (draggable != null)
+                {
+                    lastDragged = draggable;
+                    var transform1 = lastDragged.transform;
+                    var localScale = transform1.localScale;
+                    _x = localScale.x;
+                    _y = localScale.y;
+                    InitDrag();
                 }
             }
         }
     }
 
-    void initDrag()
+    private void InitDrag()
     {
-        basePosition = _lastDragged.transform.position;
+        var transform1 = lastDragged.transform;
+        _basePosition = transform1.position;
         _isDragActive = true;
-    }
-    
-    void drag () {
-        _lastDragged.transform.position = new Vector3(_worldPosition.x, _worldPosition.y);
+        transform1.localScale = new Vector3(_x * 2f, _y * 2f, 0f);   
     }
 
-    void drop () {
+    private void Drag()
+    {
+        lastDragged.transform.position = new Vector3(_worldPosition.x - 1, _worldPosition.y + 1);
+    }
+
+    public static bool FinDrag = false;
+
+    private void Drop()
+    {
         _isDragActive = false;
-        _lastDragged.transform.position = basePosition;
+        var transform1 = lastDragged.transform;
+        transform1.position = _basePosition;
+        transform1.localScale = new Vector3(_x, _y, 0f);
+
+        if (!FinDrag) return;
+        _draggable.enabled = false;
+        _dragController.enabled = false;
     }
 }
