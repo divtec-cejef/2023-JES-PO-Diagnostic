@@ -1,7 +1,9 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Nettoyage : MonoBehaviour
 {
+    private static int _accompli;
     private SpriteRenderer _spriteRenderer;
     private Material _spriteMaterial;
     private Color _targetColor;
@@ -29,11 +31,17 @@ public class Nettoyage : MonoBehaviour
         _targetColor.a -= 0.5f;
         _originalColor  = _targetColor;
 
-        if (_spriteMaterial.color.a < 0.1f)
+        if (_spriteMaterial.color.a < 0.6f)
         {
-            _spriteRenderer.gameObject.SetActive(false);
-            FinNiveau.Accompli++;
-            Debug.Log("poussiere nettoyée " + FinNiveau.Accompli);
+            Destroy(_spriteRenderer.gameObject);
+            _accompli += 1;
+            Debug.Log("poussiere nettoyée " + _accompli);
+            
+            if (_accompli == 10)
+            {
+                SceneManager.LoadScene(4);
+            }
+            
         }
         _spriteMaterial.color = _originalColor;
     }

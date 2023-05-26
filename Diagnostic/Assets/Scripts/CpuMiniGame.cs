@@ -3,29 +3,40 @@ using Random = UnityEngine.Random;
 
 public class CpuMiniGame : MonoBehaviour
 {
-    public const int NumberOfObjects = 10; // Le nombre d'objets à instancier
+    private const int NumberOfObjects = 10; // Le nombre d'objets à instancier
 
-    public Vector3 spawnAreaSize; // La taille de la zone de spawn
+    private Vector3 _spawnAreaSize; // La taille de la zone de spawn
     
     public GameObject objectPrefab; // Le prefab du GameObject à instancier
-    public GameObject spawnAreaCenter; // Le centre de la zone de spawn
-    public GameObject activate; // Le GameObject à activer
-    public GameObject deactivate; // Le GameObject à désactiver
+    private GameObject _spawnAreaCenter; // Le centre de la zone de spawn
+    private GameObject _deactivate; // Le GameObject à désactiver
 
+    private void Start()
+    {
+        _spawnAreaSize = new Vector3(1800f, 1800f, 0f);
+        _spawnAreaCenter = GameObject.Find("CPU");
+        _deactivate = GameObject.Find("Panel");
+
+        
+        Debug.Log("CpuMiniGame.Start() " + objectPrefab);
+        Debug.Log("CpuMiniGame.Start() " + _spawnAreaCenter);
+        Debug.Log("CpuMiniGame.Start() " + _deactivate);
+    }
+    
     /**
      * Instancie NumberOfObjects objets dans la zone de spawn
      */
     private void InstantiateDust()
     {
         // Boucle pour instancier les objets
-        for (var i = 0; i < NumberOfObjects - 1; i++)
+        for (var i = 0; i < NumberOfObjects; i++)
         {
             // Calculez une position aléatoire dans la zone de spawn
-            var position = spawnAreaCenter.transform.position;
-            var localScale = spawnAreaCenter.transform.localScale;
+            var position = _spawnAreaCenter.transform.position;
+            var localScale = _spawnAreaCenter.transform.localScale;
             var randomPosition = new Vector3(
-                Random.Range(position.x - spawnAreaSize.x / 2, localScale.x + spawnAreaSize.x / 2),
-                Random.Range(position.y - spawnAreaSize.y / 2, localScale.y + spawnAreaSize.y / 2),
+                Random.Range(position.x - _spawnAreaSize.x / 2, localScale.x + _spawnAreaSize.x / 2),
+                Random.Range(position.y - _spawnAreaSize.y / 2, localScale.y + _spawnAreaSize.y / 2),
                 Random.Range(0, 0)
             );
 
@@ -40,8 +51,7 @@ public class CpuMiniGame : MonoBehaviour
      */
     public void OnClick()
     {
-        activate.SetActive(true);
-        deactivate.SetActive(false);
+        _deactivate.SetActive(false);
         InstantiateDust();
     }
 }
