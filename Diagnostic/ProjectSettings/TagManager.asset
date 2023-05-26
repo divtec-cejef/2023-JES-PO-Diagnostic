@@ -8,6 +8,7 @@ TagManager:
   - Balai
   - Pan
   - CPU
+  - clipRam
   layers:
   - Default
   - TransparentFX
