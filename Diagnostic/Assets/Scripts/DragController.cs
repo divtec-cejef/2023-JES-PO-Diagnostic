@@ -102,11 +102,9 @@ public class DragController : MonoBehaviour
         var transform1 = lastDragged.transform;
         transform1.position = _basePosition;
         transform1.localScale = new Vector3(_x, _y, 0f);
-        
-        if (FinDrag)
-        {
-            _draggable.enabled = false;
-            _dragController.enabled = false;
-        }
+
+        if (!FinDrag) return;
+        _draggable.enabled = false;
+        _dragController.enabled = false;
     }
 }

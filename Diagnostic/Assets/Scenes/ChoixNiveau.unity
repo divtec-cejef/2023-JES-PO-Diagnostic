@@ -1291,6 +1291,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
+
   m_Children:
   - {fileID: 1537612652}
   m_Father: {fileID: 0}
@@ -2090,7 +2091,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1736866889}
   m_CullTransparentMesh: 1
---- !u!1001 &1782311338
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
