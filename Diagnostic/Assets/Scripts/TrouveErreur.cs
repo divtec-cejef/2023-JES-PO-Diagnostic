@@ -13,17 +13,17 @@ public class TrouveErreur : MonoBehaviour
         switch (Button.GameObjectTag)
         {
             case "CPU":
-                Debug.Log("Activating CPU error");
+                Debug.Log("Activating CPU");
                 cpuError.SetActive(true);
                 Button.SceneID = 3;
                 break;
             case "GPU":
-                Debug.Log("Activating GPU error");
+                Debug.Log("Activating GPU");
                 gpuError.SetActive(true);
                 Button.SceneID = 3;
                 break;
             case "RAM":
-                Debug.Log("Activating RAM error");
+                Debug.Log("Activating RAM");
                 ramError.SetActive(true);
                 Button.SceneID = 3;
                 break;
