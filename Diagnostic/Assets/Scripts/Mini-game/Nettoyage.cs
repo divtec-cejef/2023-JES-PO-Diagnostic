@@ -1,5 +1,10 @@
+using System.Net.Mime;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class Nettoyage : MonoBehaviour
 {
@@ -8,9 +13,14 @@ public class Nettoyage : MonoBehaviour
     private Material _spriteMaterial;
     private Color _targetColor;
     private Color _originalColor;
+    private GameObject _textPoussieresActive;
+    public static GameObject leSavaisTu;
+    private const int PoussieresRestantes = 10;
 
     private void Start()
     {
+        _textPoussieresActive = GameObject.Find("listePoussieres");
+        
         // Assurez-vous d'avoir une référence au SpriteRenderer
         _spriteRenderer = GetComponent<SpriteRenderer>();
 
@@ -22,24 +32,26 @@ public class Nettoyage : MonoBehaviour
 
         // Initialisez la couleur cible à la couleur d'origine
         _targetColor = _originalColor;
+
+        _textPoussieresActive.GetComponent<Text>().text = "Poussières restantes : " + CpuMiniGame.NumberOfObjects;
+        
+        
     }
 
     private void OnMouseExit()
     {
-        Debug.Log("Effacer");
-        
         _targetColor.a -= 0.5f;
         _originalColor  = _targetColor;
-
+        
         if (_spriteMaterial.color.a < 0.6f)
         {
             Destroy(_spriteRenderer.gameObject);
             _accompli += 1;
-            Debug.Log("poussiere nettoyée " + _accompli);
+            _textPoussieresActive.GetComponent<Text>().text = "Poussières restantes : " + (PoussieresRestantes - _accompli);
             
             if (_accompli == 10)
             {
-                SceneManager.LoadScene(4);
+                leSavaisTu.SetActive(true);
             }
             
         }
