@@ -1446,6 +1446,7 @@ GameObject:
   - component: {fileID: 1571366617}
   - component: {fileID: 1571366616}
   - component: {fileID: 1571366615}
+  - component: {fileID: 1571366618}
   m_Layer: 5
   m_Name: BT_Quitter
   m_TagString: Untagged
@@ -1518,9 +1519,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CpuMiniGame, Assembly-CSharp
-        m_MethodName: OnClick
+      - m_Target: {fileID: 1571366618}
+        m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        m_MethodName: Quitter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1568,6 +1569,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1571366612}
   m_CullTransparentMesh: 1
+--- !u!114 &1571366618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571366612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03f76a64165e42c449ef3fc2a431cc7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1627721635
 GameObject:
   m_ObjectHideFlags: 0
@@ -1931,6 +1944,7 @@ MonoBehaviour:
   spawnAreaCenter: {fileID: 1272386619}
   activate: {fileID: 1272386619}
   listePoussieres: {fileID: 1525028257}
+  _leSavaisTu: {fileID: 271988027}
 --- !u!1 &1955550832
 GameObject:
   m_ObjectHideFlags: 0

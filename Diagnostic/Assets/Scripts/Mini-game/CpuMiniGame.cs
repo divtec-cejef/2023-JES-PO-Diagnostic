@@ -1,5 +1,5 @@
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 public class CpuMiniGame : MonoBehaviour
@@ -13,19 +13,15 @@ public class CpuMiniGame : MonoBehaviour
     private GameObject _deactivate; // Le GameObject à désactiver
     public GameObject activate; // Le GameObject à activer
     public GameObject listePoussieres;
-    private static GameObject _leSavaisTu;
-    public List<GameObject> listeInstances;
+    
+    public GameObject leSavaisTu;
 
     private void Start()
     {
         _spawnAreaSize = new Vector3(1600f, 1600f, 0f);
         
         _deactivate = GameObject.Find("Probleme");
-        
-        _leSavaisTu = GameObject.Find("LeSavaisTu");
-        
-        _leSavaisTu.SetActive(false);
-        
+
         Debug.Log("__________________________________");
         Debug.Log("__Début du jeu CPU__");
         Debug.Log("Zone de spawn " + spawnAreaCenter);
@@ -33,6 +29,8 @@ public class CpuMiniGame : MonoBehaviour
         Debug.Log("Active " + activate);
         Debug.Log("Liste poussieres " + listePoussieres);
         Debug.Log("__________________________________");
+        
+        Nettoyage.leSavaisTu = leSavaisTu;
     }
     
     /**
@@ -47,13 +45,14 @@ public class CpuMiniGame : MonoBehaviour
             var position = spawnAreaCenter.transform.position;
             var localScale = spawnAreaCenter.transform.localScale;
             var randomPosition = new Vector3(
+                
                 Random.Range(position.x - _spawnAreaSize.x / 2, localScale.x + _spawnAreaSize.x / 2),
                 Random.Range(position.y - _spawnAreaSize.y / 2, localScale.y + _spawnAreaSize.y / 2),
                 Random.Range(0, 0)
             );
 
             // Instanciez le GameObject à la position aléatoire avec une rotation par défaut
-            listeInstances.Add(Instantiate(objectPrefab, randomPosition, Quaternion.identity));
+            Instantiate(objectPrefab, randomPosition, Quaternion.identity);
             Debug.Log("CpuMiniGame.InstantiateDust() " + objectPrefab);
         }
     }
@@ -68,10 +67,5 @@ public class CpuMiniGame : MonoBehaviour
         activate.SetActive(true);
         listePoussieres.SetActive(true);
         InstantiateDust();
-    }
-
-    public static void ActivatePopUp()
-    {
-        _leSavaisTu.SetActive(true);
     }
 }

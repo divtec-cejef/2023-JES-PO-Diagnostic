@@ -14,7 +14,7 @@ public class Nettoyage : MonoBehaviour
     private Color _targetColor;
     private Color _originalColor;
     private GameObject _textPoussieresActive;
-    public GameObject leSavaisTu;
+    public static GameObject leSavaisTu;
     private const int PoussieresRestantes = 10;
 
     private void Start()
@@ -34,6 +34,8 @@ public class Nettoyage : MonoBehaviour
         _targetColor = _originalColor;
 
         _textPoussieresActive.GetComponent<Text>().text = "Poussières restantes : " + CpuMiniGame.NumberOfObjects;
+        
+        
     }
 
     private void OnMouseExit()
@@ -49,7 +51,7 @@ public class Nettoyage : MonoBehaviour
             
             if (_accompli == 10)
             {
-                CpuMiniGame.ActivatePopUp();
+                leSavaisTu.SetActive(true);
             }
             
         }
