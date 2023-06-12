@@ -145,6 +145,7 @@ Library: lib_burst_generated
 --root-assembly=C:\Users\Admin\Documents\GitHub\2023-JES-PO-Diagnostic\Diagnostic\Temp\StagingArea\Data\Managed\Unity.2D.Animation.Runtime.dll
 --root-assembly=C:\Users\Admin\Documents\GitHub\2023-JES-PO-Diagnostic\Diagnostic\Temp\StagingArea\Data\Managed\Unity.TextMeshPro.dll
 --root-assembly=C:\Users\Admin\Documents\GitHub\2023-JES-PO-Diagnostic\Diagnostic\Temp\StagingArea\Data\Managed\Unity.Timeline.dll
+--root-assembly=C:\Users\Admin\Documents\GitHub\2023-JES-PO-Diagnostic\Diagnostic\Temp\StagingArea\Data\Managed\Unity.VectorGraphics.dll
 --root-assembly=C:\Users\Admin\Documents\GitHub\2023-JES-PO-Diagnostic\Diagnostic\Temp\StagingArea\Data\Managed\Unity.Notifications.Android.dll
 --root-assembly=C:\Users\Admin\Documents\GitHub\2023-JES-PO-Diagnostic\Diagnostic\Temp\StagingArea\Data\Managed\CFXRDemo.dll
 --root-assembly=C:\Users\Admin\Documents\GitHub\2023-JES-PO-Diagnostic\Diagnostic\Temp\StagingArea\Data\Managed\Unity.2D.SpriteShape.Runtime.dll
@@ -153,6 +154,7 @@ Library: lib_burst_generated
 --root-assembly=C:\Users\Admin\Documents\GitHub\2023-JES-PO-Diagnostic\Diagnostic\Temp\StagingArea\Data\Managed\Unity.2D.Common.Runtime.dll
 --root-assembly=C:\Users\Admin\Documents\GitHub\2023-JES-PO-Diagnostic\Diagnostic\Temp\StagingArea\Data\Managed\Unity.2D.IK.Runtime.dll
 --root-assembly=C:\Users\Admin\Documents\GitHub\2023-JES-PO-Diagnostic\Diagnostic\Temp\StagingArea\Data\Managed\CFXRRuntime.dll
+--root-assembly=C:\Users\Admin\Documents\GitHub\2023-JES-PO-Diagnostic\Diagnostic\Temp\StagingArea\Data\Managed\Unity.InternalAPIEngineBridge.003.dll
 --root-assembly=C:\Users\Admin\Documents\GitHub\2023-JES-PO-Diagnostic\Diagnostic\Temp\StagingArea\Data\Managed\Unity.2D.Tilemap.Extras.dll
 --root-assembly=C:\Users\Admin\Documents\GitHub\2023-JES-PO-Diagnostic\Diagnostic\Temp\StagingArea\Data\Managed\Unity.Profiling.Core.dll
 --root-assembly=C:\Users\Admin\Documents\GitHub\2023-JES-PO-Diagnostic\Diagnostic\Temp\StagingArea\Data\Managed\Unity.InternalAPIEngineBridge.001.dll
