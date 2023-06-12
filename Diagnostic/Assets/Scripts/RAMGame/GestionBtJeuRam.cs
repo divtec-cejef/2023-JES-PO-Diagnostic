@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class GestionJeuRam : MonoBehaviour
+public class GestionBtJeuRam : MonoBehaviour
 {
     public GameObject thingToHide;
     public GameObject thingToShow;
@@ -10,10 +11,5 @@ public class GestionJeuRam : MonoBehaviour
     {
         thingToHide.SetActive(false);
         thingToShow.SetActive(true);
-    }
-    
-    void clicBtSuivant() 
-    { 
-
     }
 }

@@ -23,6 +23,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CPU.unity
     guid: ee080df645342584ea954d829d3734f1
+  - enabled: 1
+    path: Assets/Scenes/Partie ram/MiniJeuxRam.unity
+    guid: 6f09c741a8e955049bcb3c5c07536d00
+  - enabled: 1
+    path: Assets/Scenes/Partie ram/Shelves.unity
+    guid: aedb721d4809f5542a21f83597fde5b8
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: a1627e0dad6c1a34e8b90c269f3e524e, type: 2}
     com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: a3ec46b4caab8b5448a14b13a1a73299, type: 2}

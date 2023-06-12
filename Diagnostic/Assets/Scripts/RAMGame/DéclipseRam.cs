@@ -27,7 +27,7 @@ public class DéclipseRam : MonoBehaviour
         clipsCliques = 0;
         Debug.Log("Ram déclipsée");
 
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1f);
 
         finDEtape();
     }
