@@ -8,6 +8,7 @@ TagManager:
   - Balai
   - Pan
   - CPU
+  - GPU
   - RAM
   layers:
   - Default

@@ -17,9 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Base-game.unity
     guid: 7c5ab3c791803134b84023e73642d040
-  - enabled: 0
-    path: Assets/Scenes/Bravo.unity
-    guid: 0ea53fc8d5f71f943b59e2817a0b4865
   - enabled: 1
     path: Assets/Scenes/CPU.unity
     guid: ee080df645342584ea954d829d3734f1
