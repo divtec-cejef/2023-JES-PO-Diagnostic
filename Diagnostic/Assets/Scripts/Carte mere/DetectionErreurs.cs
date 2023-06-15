@@ -18,6 +18,7 @@ public class DetectionErreurs : MonoBehaviour
     
     public void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Collision" + collision.tag);
         if (popUpFelicitation.activeSelf) 
             return;
             

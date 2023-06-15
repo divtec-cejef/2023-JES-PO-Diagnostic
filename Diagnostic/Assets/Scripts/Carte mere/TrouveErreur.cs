@@ -10,26 +10,20 @@ public class TrouveErreur : MonoBehaviour
 
     private void Start()
     {
-        switch (Button.GameObjectTag)
+        switch (Button.TypeOfError)
         {
-            case "CPU":
-                Debug.Log("Activating CPU");
+            case 1:
                 cpuError.SetActive(true);
-                Button.SceneID = 3;
                 break;
-            case "GPU":
-                Debug.Log("Activating GPU");
+            case 2:
                 gpuError.SetActive(true);
-                Button.SceneID = 3;
                 break;
-            case "RAM":
-                Debug.Log("Activating RAM");
+            case 3:
                 ramError.SetActive(true);
-                Button.SceneID = 3;
                 break;
-            default:
-                Debug.Log("TrouvErreur.Start() aucun tag trouvé");
-                break;
+        }
+        {
+            
         }
     }
 }
