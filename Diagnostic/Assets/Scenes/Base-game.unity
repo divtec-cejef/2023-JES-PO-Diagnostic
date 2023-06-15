@@ -1315,8 +1315,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Utilise la loupe pour cherhcer et trouver des probl\xE8mes sur la carte
-    m\xE8re"
+  m_text: "Utilise la loupe pour chercher et trouver des probl\xE8mes sur la carte
+    m\xE8re."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
