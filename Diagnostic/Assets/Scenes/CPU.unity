@@ -686,7 +686,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Bien jou\xE9 gr\xE2ce \xE0 toi, le processeur devrait fonctionner \xE0
     nouveau.\r\nLe savais tu, le processeur est enfaite juste un calculateur qui
-    fonctionne sur deux \xE9tats allum\xE9s et \xE9teints ou alors 0 et 1"
+    fonctionne sur deux \xE9tats allum\xE9 et \xE9teint ou alors 0 et 1"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1944,7 +1944,7 @@ MonoBehaviour:
   spawnAreaCenter: {fileID: 1272386619}
   activate: {fileID: 1272386619}
   listePoussieres: {fileID: 1525028257}
-  _leSavaisTu: {fileID: 271988027}
+  leSavaisTu: {fileID: 0}
 --- !u!1 &1955550832
 GameObject:
   m_ObjectHideFlags: 0
