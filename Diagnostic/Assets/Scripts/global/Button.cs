@@ -6,6 +6,7 @@ public class Button : MonoBehaviour
     public static int SceneID = 1;
     public static string GameObjectTag;
     public static int TypeOfError;
+    
     public void ChangerScene()
     {
         Debug.Log("Click");
