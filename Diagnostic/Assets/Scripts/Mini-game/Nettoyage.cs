@@ -45,7 +45,7 @@ public class Nettoyage : MonoBehaviour
             _textPoussieresActive.GetComponent<Text>().text =
                 "Poussières restantes : " + (PoussieresRestantes - _accompli);
 
-            if (_accompli == 10)
+            if (_accompli == 5)
             {
                 LeSavaisTu.SetActive(true);
             }

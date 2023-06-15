@@ -198,6 +198,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2096960578}
     m_Modifications:
+    - target: {fileID: -7871556540511652807, guid: ddf0cca000788db44b7b4c188ed1ccbb, type: 3}
+      propertyPath: m_SortingOrder
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: -3888481672020999207, guid: ddf0cca000788db44b7b4c188ed1ccbb, type: 3}
       propertyPath: m_Name
       value: PC_gris
@@ -617,6 +621,10 @@ PrefabInstance:
       propertyPath: m_FlipY
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7871556540511652807, guid: 47b2512a3774c984a85b3a3fe734f405, type: 3}
+      propertyPath: m_SortingOrder
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: -3888481672020999207, guid: 47b2512a3774c984a85b3a3fe734f405, type: 3}
       propertyPath: m_Name
       value: PC_blanc
@@ -651,7 +659,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 47b2512a3774c984a85b3a3fe734f405, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 47b2512a3774c984a85b3a3fe734f405, type: 3}
       propertyPath: m_LocalRotation.w
@@ -771,6 +779,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2096960578}
     m_Modifications:
+    - target: {fileID: -7871556540511652807, guid: 05f8b0ff6210c3b4f8a4fcbfb44e18b3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: -3888481672020999207, guid: 05f8b0ff6210c3b4f8a4fcbfb44e18b3, type: 3}
       propertyPath: m_Name
       value: PC_orange
