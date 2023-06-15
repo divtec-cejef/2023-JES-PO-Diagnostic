@@ -1,9 +1,4 @@
-using System.Net.Mime;
-using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class Nettoyage : MonoBehaviour
@@ -14,13 +9,14 @@ public class Nettoyage : MonoBehaviour
     private Color _targetColor;
     private Color _originalColor;
     private GameObject _textPoussieresActive;
-    public static GameObject leSavaisTu;
-    private const int PoussieresRestantes = 10;
+    public static GameObject LeSavaisTu;
+    public static GameObject handTutorial;
+    private const int PoussieresRestantes = 5;
 
     private void Start()
     {
         _textPoussieresActive = GameObject.Find("listePoussieres");
-        
+
         // Assurez-vous d'avoir une référence au SpriteRenderer
         _spriteRenderer = GetComponent<SpriteRenderer>();
 
@@ -34,27 +30,29 @@ public class Nettoyage : MonoBehaviour
         _targetColor = _originalColor;
 
         _textPoussieresActive.GetComponent<Text>().text = "Poussières restantes : " + CpuMiniGame.NumberOfObjects;
-        
-        
     }
 
     private void OnMouseExit()
     {
         _targetColor.a -= 0.5f;
-        _originalColor  = _targetColor;
-        
+        _originalColor = _targetColor;
+
+
         if (_spriteMaterial.color.a < 0.6f)
         {
             Destroy(_spriteRenderer.gameObject);
             _accompli += 1;
-            _textPoussieresActive.GetComponent<Text>().text = "Poussières restantes : " + (PoussieresRestantes - _accompli);
-            
+            _textPoussieresActive.GetComponent<Text>().text =
+                "Poussières restantes : " + (PoussieresRestantes - _accompli);
+
             if (_accompli == 10)
             {
-                leSavaisTu.SetActive(true);
+                LeSavaisTu.SetActive(true);
             }
-            
         }
+
         _spriteMaterial.color = _originalColor;
+        if (handTutorial.activeSelf == false) return;
+        handTutorial.SetActive(false);
     }
 }

@@ -1,38 +1,45 @@
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 public class CpuMiniGame : MonoBehaviour
 {
-    public static int NumberOfObjects = 10; // Le nombre d'objets à instancier
+    public static readonly int NumberOfObjects = 5; // Le nombre d'objets à instancier
 
     private Vector3 _spawnAreaSize; // La taille de la zone de spawn
-    
+
     public GameObject objectPrefab; // Le prefab du GameObject à instancier
     public GameObject spawnAreaCenter; // Le centre de la zone de spawn
-    private GameObject _deactivate; // Le GameObject à désactiver
-    public GameObject activate; // Le GameObject à activer
+    public GameObject cpu; // Le GameObject à activer
     public GameObject listePoussieres;
-    
+    public GameObject handTutorial;
     public GameObject leSavaisTu;
+    private GameObject _deactivate; // Le GameObject à désactiver
+    
+    private readonly List<GameObject> _activateList = new List<GameObject>();
+
 
     private void Start()
     {
         _spawnAreaSize = new Vector3(1600f, 1600f, 0f);
-        
+
         _deactivate = GameObject.Find("Probleme");
+
+        _activateList.Add(cpu);
+        _activateList.Add(handTutorial);
 
         Debug.Log("__________________________________");
         Debug.Log("__Début du jeu CPU__");
         Debug.Log("Zone de spawn " + spawnAreaCenter);
         Debug.Log("Desactive " + _deactivate);
-        Debug.Log("Active " + activate);
+        Debug.Log("Active " + cpu);
         Debug.Log("Liste poussieres " + listePoussieres);
         Debug.Log("__________________________________");
-        
-        Nettoyage.leSavaisTu = leSavaisTu;
+
+        Nettoyage.LeSavaisTu = leSavaisTu;
+        Nettoyage.handTutorial = handTutorial;
     }
-    
+
     /**
      * Instancie un nombre d'objets dans la zone de spawn
      */
@@ -45,7 +52,6 @@ public class CpuMiniGame : MonoBehaviour
             var position = spawnAreaCenter.transform.position;
             var localScale = spawnAreaCenter.transform.localScale;
             var randomPosition = new Vector3(
-                
                 Random.Range(position.x - _spawnAreaSize.x / 2, localScale.x + _spawnAreaSize.x / 2),
                 Random.Range(position.y - _spawnAreaSize.y / 2, localScale.y + _spawnAreaSize.y / 2),
                 Random.Range(0, 0)
@@ -56,7 +62,7 @@ public class CpuMiniGame : MonoBehaviour
             Debug.Log("CpuMiniGame.InstantiateDust() " + objectPrefab);
         }
     }
-    
+
     /**
      * Active le GameObject aActiver et désactive le GameObject aDesactiver
      * Appelle LauchDust()
@@ -64,7 +70,11 @@ public class CpuMiniGame : MonoBehaviour
     public void OnClick()
     {
         _deactivate.SetActive(false);
-        activate.SetActive(true);
+        foreach (var a in _activateList)
+        {
+            a.SetActive(true);
+        }
+
         listePoussieres.SetActive(true);
         InstantiateDust();
     }
