@@ -7,12 +7,14 @@ using Debug = UnityEngine.Debug;
 public class DetectionErreurs : MonoBehaviour
 {
     public GameObject popUpFelicitation;
+    public GameObject game;
     private GameObject _composant;
     private string _objet;
 
     private IEnumerator Afficher()
     {
         yield return new WaitForSeconds(1);
+        game.SetActive(false);
         popUpFelicitation.SetActive(true);
     }
     
