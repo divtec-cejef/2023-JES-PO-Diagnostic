@@ -51,4 +51,36 @@ public class DetectionPoubelle : MonoBehaviour
         _hand.SetActive(false);
         _infos.SetActive(false);
     }
+<<<<<<< Updated upstream
+}
+=======
+
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        GameObject collisionGameObject = collision.gameObject;
+
+        switch (collisionGameObject.tag)
+        {
+            case "Banane":
+                banane.SetActive(true);
+                break;
+            case "amongus":
+                amongus.SetActive(true);
+                break;
+            case "cable":
+                cable.SetActive(true);
+                break;
+            case "duck":
+                duck.SetActive(true);
+                break;
+            case "Tobias":
+                tobias.SetActive(true);
+                break;
+        }
+
+        Destroy(collisionGameObject);
+
+        _hand.SetActive(false);
+        _infos.SetActive(false);
+    }
 }
