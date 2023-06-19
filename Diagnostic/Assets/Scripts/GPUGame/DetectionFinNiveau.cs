@@ -11,7 +11,7 @@ public class DetectionFinNiveau : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ObjetsRetires == 4)
+        if (ObjetsRetires == 5)
         {
             StartCoroutine(PauseCoroutine());
         }    
