@@ -10,6 +10,10 @@ TagManager:
   - CPU
   - GPU
   - RAM
+  - Banane
+  - cable
+  - amongus
+  - duck
   layers:
   - Default
   - TransparentFX
