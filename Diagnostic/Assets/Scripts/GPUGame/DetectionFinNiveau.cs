@@ -21,7 +21,10 @@ public class DetectionFinNiveau : MonoBehaviour
     {
         ObjetsRetires = 0;
 
-        yield return new WaitForSeconds(1f);
+        Animator myAnim = GameObject.Find("Fan").GetComponent<Animator>();
+        myAnim.Play("Fan_ok");
+        
+        yield return new WaitForSeconds(2);
 
         finDEtape();
     }
