@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Android;
 
 
 public class DetectionPoubelle : MonoBehaviour
@@ -9,6 +10,7 @@ public class DetectionPoubelle : MonoBehaviour
     public GameObject amongus;
     public GameObject cable;
     public GameObject duck;
+    public GameObject tobias;
 
     public void Start()
     {
@@ -38,6 +40,9 @@ public class DetectionPoubelle : MonoBehaviour
                 break;
             case "duck":
                 duck.SetActive(true);
+                break;
+            case "Tobias":
+                tobias.SetActive(true);
                 break;
         }
 
