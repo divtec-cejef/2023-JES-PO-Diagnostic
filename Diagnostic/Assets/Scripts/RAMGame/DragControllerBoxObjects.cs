@@ -1,23 +1,23 @@
 using UnityEngine;
 
-public class DragControllerSpecial : MonoBehaviour
+public class DragControllerBoxObjects : MonoBehaviour
 {
     public static bool _isDragActive;
     private Vector2 _screenPosition;
     private Vector3 _worldPosition;
-    private DragControllerSpecial _dragController;
-    private DraggableSpecial _draggable;
-    public DraggableSpecial lastDragged;
+    private DragControllerBoxObjects _dragController;
+    private Draggable _draggable;
+    public Draggable lastDragged;
     
     private void Start()
     {
-        _dragController = FindObjectOfType<DragControllerSpecial>();
-        _draggable = FindObjectOfType<DraggableSpecial>();
+        _dragController = FindObjectOfType<DragControllerBoxObjects>();
+        _draggable = FindObjectOfType<Draggable>();
     }
 
     void Awake()
     {
-        DragControllerSpecial[] dragControllers = FindObjectsOfType<DragControllerSpecial>();
+        DragControllerBoxObjects[] dragControllers = FindObjectsOfType<DragControllerBoxObjects>();
         if (dragControllers.Length > 1)
         {
             Destroy(gameObject);
@@ -64,7 +64,7 @@ public class DragControllerSpecial : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(_worldPosition, Vector2.zero);
             if (hit.collider != null)
             {
-                DraggableSpecial draggable = hit.collider.GetComponent<DraggableSpecial>();
+                Draggable draggable = hit.collider.GetComponent<Draggable>();
                 if (draggable != null)
                 {
                     lastDragged = draggable;
@@ -76,16 +76,12 @@ public class DragControllerSpecial : MonoBehaviour
 
     private void InitDrag()
     {
-        _isDragActive = true; 
+        _isDragActive = true;  
     }
 
     private void Drag()
     {
-        lastDragged.transform.position = new Vector3(_worldPosition.x, 1.375f, 10f);
-
-        if(_worldPosition.x < 1.45f){
-            lastDragged.transform.position = new Vector3(1.5f, 1.375f, 10f);
-        }
+        lastDragged.transform.position = new Vector3(_worldPosition.x - 1, _worldPosition.y + 1, 1f);
     }
 
     public static bool FinDrag = false;
@@ -99,4 +95,3 @@ public class DragControllerSpecial : MonoBehaviour
         _dragController.enabled = false;
     }
 }
-
