@@ -7,6 +7,7 @@ public class endCut : MonoBehaviour
     public GameObject openBox;
     public GameObject closedBox;
     public GameObject cutter;
+    public GameObject endCutBloc;
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,5 +16,6 @@ public class endCut : MonoBehaviour
         openBox.SetActive(true);
         closedBox.SetActive(false);
         cutter.SetActive(false);
+        endCutBloc.SetActive(false);
     }
 }

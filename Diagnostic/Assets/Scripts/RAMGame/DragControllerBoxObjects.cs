@@ -81,7 +81,7 @@ public class DragControllerBoxObjects : MonoBehaviour
 
     private void Drag()
     {
-        lastDragged.transform.position = new Vector3(_worldPosition.x - 1, _worldPosition.y + 1, 1f);
+        lastDragged.transform.position = new Vector3(_worldPosition.x, _worldPosition.y, 1f);
     }
 
     public static bool FinDrag = false;
