@@ -6,13 +6,13 @@ public class DragControllerBoxObjects : MonoBehaviour
     private Vector2 _screenPosition;
     private Vector3 _worldPosition;
     private DragControllerBoxObjects _dragController;
-    private Draggable _draggable;
-    public Draggable lastDragged;
+    private DraggableOpenBox _draggable;
+    public DraggableOpenBox lastDragged;
     
     private void Start()
     {
         _dragController = FindObjectOfType<DragControllerBoxObjects>();
-        _draggable = FindObjectOfType<Draggable>();
+        _draggable = FindObjectOfType<DraggableOpenBox>();
     }
 
     void Awake()
@@ -64,7 +64,7 @@ public class DragControllerBoxObjects : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(_worldPosition, Vector2.zero);
             if (hit.collider != null)
             {
-                Draggable draggable = hit.collider.GetComponent<Draggable>();
+                DraggableOpenBox draggable = hit.collider.GetComponent<DraggableOpenBox>();
                 if (draggable != null)
                 {
                     lastDragged = draggable;

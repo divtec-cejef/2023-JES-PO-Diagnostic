@@ -328,7 +328,7 @@ GameObject:
   - component: {fileID: 293467723}
   - component: {fileID: 293467722}
   - component: {fileID: 293467721}
-  - component: {fileID: 293467720}
+  - component: {fileID: 293467724}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -357,20 +357,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -294}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &293467720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 293467718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d7177d17d32f50409b927c84375dcd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thingToHide: {fileID: 1601178438}
-  thingToShow: {fileID: 384690632}
 --- !u!114 &293467721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -415,8 +401,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 293467720}
-        m_TargetAssemblyTypeName: GestionBtJeuRam, Assembly-CSharp
+      - m_Target: {fileID: 293467724}
+        m_TargetAssemblyTypeName: beginGame, Assembly-CSharp
         m_MethodName: clicBtCommencer
         m_Mode: 1
         m_Arguments:
@@ -465,6 +451,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 293467718}
   m_CullTransparentMesh: 1
+--- !u!114 &293467724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293467718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bb397d2576001847a8cebedead3ddb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thingToHide: {fileID: 1601178438}
+  thingToShow: {fileID: 384690632}
 --- !u!1 &349136892
 GameObject:
   m_ObjectHideFlags: 0
