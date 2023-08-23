@@ -1,26 +1,23 @@
 using UnityEngine;
 
-public class DragController : MonoBehaviour
+public class DragControllerSpecial : MonoBehaviour
 {
     public static bool _isDragActive;
     private Vector2 _screenPosition;
     private Vector3 _worldPosition;
-    private DragController _dragController;
-    private Draggable _draggable;
-    public Draggable lastDragged;
-    private Vector3 _basePosition;
-    private float _x;
-    private float _y;
+    private DragControllerSpecial _dragController;
+    private DraggableSpecial _draggable;
+    public DraggableSpecial lastDragged;
     
     private void Start()
     {
-        _dragController = FindObjectOfType<DragController>();
-        _draggable = FindObjectOfType<Draggable>();
+        _dragController = FindObjectOfType<DragControllerSpecial>();
+        _draggable = FindObjectOfType<DraggableSpecial>();
     }
 
     void Awake()
     {
-        DragController[] dragControllers = FindObjectsOfType<DragController>();
+        DragControllerSpecial[] dragControllers = FindObjectsOfType<DragControllerSpecial>();
         if (dragControllers.Length > 1)
         {
             Destroy(gameObject);
@@ -67,14 +64,10 @@ public class DragController : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(_worldPosition, Vector2.zero);
             if (hit.collider != null)
             {
-                Draggable draggable = hit.collider.GetComponent<Draggable>();
+                DraggableSpecial draggable = hit.collider.GetComponent<DraggableSpecial>();
                 if (draggable != null)
                 {
                     lastDragged = draggable;
-                    var transform1 = lastDragged.transform;
-                    var localScale = transform1.localScale;
-                    _x = localScale.x;
-                    _y = localScale.y;
                     InitDrag();
                 }
             }
@@ -83,15 +76,16 @@ public class DragController : MonoBehaviour
 
     private void InitDrag()
     {
-        var transform1 = lastDragged.transform;
-        _basePosition = transform1.position;
-        _isDragActive = true;
-        transform1.localScale = new Vector3(_x * 2f, _y * 2f, 0f);   
+        _isDragActive = true; 
     }
 
     private void Drag()
     {
-        lastDragged.transform.position = new Vector3(_worldPosition.x - 1, _worldPosition.y + 1, 10f);
+        lastDragged.transform.position = new Vector3(_worldPosition.x, 1.375f, 10f);
+
+        if(_worldPosition.x < 1.45f){
+            lastDragged.transform.position = new Vector3(1.5f, 1.375f, 10f);
+        }
     }
 
     public static bool FinDrag = false;
@@ -99,12 +93,10 @@ public class DragController : MonoBehaviour
     private void Drop()
     {
         _isDragActive = false;
-        var transform1 = lastDragged.transform;
-        transform1.position = _basePosition;
-        transform1.localScale = new Vector3(_x, _y, 0f);
 
         if (!FinDrag) return;
         _draggable.enabled = false;
         _dragController.enabled = false;
     }
 }
+
