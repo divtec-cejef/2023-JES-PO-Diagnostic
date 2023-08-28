@@ -42,4 +42,10 @@ public class Button : MonoBehaviour
         Button.SceneID = 2;
         SceneManager.LoadScene(SceneID);
     }
+
+    public void Recommencer()
+    {
+        Button.SceneID = 1;
+        SceneManager.LoadScene(SceneID);
+    }
 }
