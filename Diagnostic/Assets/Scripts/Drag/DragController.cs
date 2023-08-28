@@ -91,7 +91,7 @@ public class DragController : MonoBehaviour
 
     private void Drag()
     {
-        lastDragged.transform.position = new Vector3(_worldPosition.x - 1, _worldPosition.y + 1, 10f);
+        lastDragged.transform.position = new Vector3(_worldPosition.x - 1, _worldPosition.y + 1, 0f);
     }
 
     public static bool FinDrag = false;
