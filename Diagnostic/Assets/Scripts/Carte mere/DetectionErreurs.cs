@@ -32,10 +32,10 @@ public class DetectionErreurs : MonoBehaviour
                 Button.SceneID = 3;
                 break;
             case "GPU":
-                Button.SceneID = 5;
+                Button.SceneID = 4;
                 break;
             case "RAM":
-                Button.SceneID = 4;
+                Button.SceneID = 5;
                 break;
         }
         
