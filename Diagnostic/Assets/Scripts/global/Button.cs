@@ -15,6 +15,7 @@ public class Button : MonoBehaviour
 
     public void Quitter()
     {
+        Debug.Log("Application en cours de fermerture");
         Application.Quit();
     }
     
