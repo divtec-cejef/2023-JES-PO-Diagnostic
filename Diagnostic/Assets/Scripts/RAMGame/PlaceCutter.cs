@@ -8,6 +8,7 @@ public class PlaceCutter : MonoBehaviour
     public GameObject placedCutter;
     public GameObject checker;
     public GameObject cutChecker;
+    public GameObject endTuto;
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -17,6 +18,7 @@ public class PlaceCutter : MonoBehaviour
         placedCutter.SetActive(true);
         checker.SetActive(false);
         cutChecker.SetActive(true);
+        endTuto.SetActive(false);
     }
 
 }
