@@ -47,6 +47,7 @@ public class Nettoyage : MonoBehaviour
 
             if (_accompli == 5)
             {
+                _accompli = 0;
                 LeSavaisTu.SetActive(true);
             }
         }
