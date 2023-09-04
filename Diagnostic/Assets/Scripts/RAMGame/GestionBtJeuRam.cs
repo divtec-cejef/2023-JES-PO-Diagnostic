@@ -6,14 +6,10 @@ using UnityEngine.SceneManagement;
 public class GestionBtJeuRam : MonoBehaviour
 {
     public GameObject thingToHide;
-    public GameObject motherBoard;
-    public GameObject closedBox;
-    public GameObject cutter;
+    public GameObject thingToShow;
     public void clicBtCommencer()
     {
         thingToHide.SetActive(false);
-        motherBoard.SetActive(true);
-        closedBox.SetActive(true);
-        cutter.SetActive(true);
+        thingToShow.SetActive(true);
     }
 }
