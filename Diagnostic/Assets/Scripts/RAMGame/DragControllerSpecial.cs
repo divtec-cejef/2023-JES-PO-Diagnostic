@@ -81,10 +81,10 @@ public class DragControllerSpecial : MonoBehaviour
 
     private void Drag()
     {
-        lastDragged.transform.position = new Vector3(_worldPosition.x, 1.52f, 0f);
+        lastDragged.transform.position = new Vector3(_worldPosition.x, 1.56f, 0f);
 
-        if(_worldPosition.x < 0.92f){
-            lastDragged.transform.position = new Vector3(0.93f, 1.52f, 0f);
+        if(_worldPosition.x < 1.9f){
+            lastDragged.transform.position = new Vector3(1.9f, 1.56f, 0f);
         }
     }
 
