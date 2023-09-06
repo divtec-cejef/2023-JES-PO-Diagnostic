@@ -37,6 +37,9 @@ public class DetectionErreurs : MonoBehaviour
             case "RAM":
                 Button.SceneID = 5;
                 break;
+            case "ALIM":
+                Button.SceneID = 6;
+                break;
         }
         
         StartCoroutine(Afficher());
