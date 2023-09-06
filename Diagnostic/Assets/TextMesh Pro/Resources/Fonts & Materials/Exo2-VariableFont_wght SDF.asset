@@ -70,9 +70,9 @@ Material:
     - _OutlineWidth: 0
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
-    - _ScaleRatioA: 1
-    - _ScaleRatioB: 1
-    - _ScaleRatioC: 1
+    - _ScaleRatioA: 0.8333333
+    - _ScaleRatioB: 0.6770833
+    - _ScaleRatioC: 0.6770833
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
@@ -117,9 +117,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: Exo2-VariableFont_wght SDF
   m_EditorClassIdentifier: 
-  hashCode: 0
+  hashCode: 1553336058
   material: {fileID: -8165485107114212174}
-  materialHashCode: 0
+  materialHashCode: 1150984474
   m_Version: 1.1.0
   m_SourceFontFileGUID: d73c50e6ef4fc074688df5e5be426106
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: d73c50e6ef4fc074688df5e5be426106, type: 3}
