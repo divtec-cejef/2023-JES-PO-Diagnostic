@@ -4,23 +4,17 @@ using UnityEngine;
 
 public class DetectRam : MonoBehaviour
 {
-    public GameObject Game;
-    public GameObject TextOK;
-    public GameObject FinNiv;
-
-    private IEnumerator FinDeNiveau()
-    {
-        TextOK.SetActive(true);
-        yield return new WaitForSeconds(1);
-        Game.SetActive(false);
-        FinNiv.SetActive(true);
-
-    }
+    public static bool OnMotherboard = false;
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Collision2");
-        
-        StartCoroutine(FinDeNiveau());
+        Debug.Log("entré");
+        OnMotherboard = true;
+    }
+
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        Debug.Log("sorti");
+        OnMotherboard = false;
     }
 }
