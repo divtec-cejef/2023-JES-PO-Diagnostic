@@ -2499,7 +2499,7 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "Ici tu auras le choix entre trois PC et chacun d'entre eux \xE0 un soucis
-    paritculier que tu devrais r\xE9soudre"
+    paritculier que tu devras r\xE9soudre"
 --- !u!222 &1386804370
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2624,7 +2624,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1498927725
 Transform:
   m_ObjectHideFlags: 0
@@ -2966,8 +2966,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Je suis Tobi, je serai vote soutien pour tout le reste de cette courte
-    aventure
+  m_Text: Je suis Tobi, votre soutien pour tout le reste de cette courte aventure
 --- !u!222 &1672166696
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3100,7 +3099,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1837977004
 Transform:
   m_ObjectHideFlags: 0
