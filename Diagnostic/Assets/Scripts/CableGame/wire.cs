@@ -34,6 +34,7 @@ public class wire : MonoBehaviour
                 //check if the wire are same color
                 if (transform.parent.name.Equals(collider.transform.parent.name))
                 {
+                    main.instance.OnCableOn(1);
                     //finish step
                     collider.GetComponent<wire>()?.Done();
                     Done();
