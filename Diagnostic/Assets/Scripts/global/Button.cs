@@ -37,6 +37,10 @@ public class Button : MonoBehaviour
                 Debug.Log("RAM");
                 TypeOfError = 3;
                 break;
+            case "ALIM" :
+                Debug.Log("ALIM");
+                TypeOfError = 4;
+                break;
             default:
                 return;
         }

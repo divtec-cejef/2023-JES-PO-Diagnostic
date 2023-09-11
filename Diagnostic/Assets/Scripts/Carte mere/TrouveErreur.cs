@@ -8,13 +8,8 @@ public class TrouveErreur : MonoBehaviour
     public GameObject cpuError;
     public GameObject gpuError;
     public GameObject ramError;
+    public GameObject alimError;
     public static int NumScene = 0;
-
-    private IEnumerator Attendre(int a)
-    {
-        yield return new WaitForSeconds(a);
-        gpuError.SetActive(true);
-    }
     
     private void Start()
     {
@@ -24,14 +19,15 @@ public class TrouveErreur : MonoBehaviour
                 cpuError.SetActive(true);
                 break;
             case 2:
-                StartCoroutine(Attendre(2));
+                gpuError.SetActive(true);
                 break;
             case 3:
                 ramError.SetActive(true);
                 break;
+            case 4:
+                alimError.SetActive(true);
+                break;
         }
-        {
-            
-        }
+
     }
 }
