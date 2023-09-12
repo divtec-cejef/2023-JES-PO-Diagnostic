@@ -1,47 +1,66 @@
-using System;
-using System.Collections;
-using System.Runtime.CompilerServices;
-using UnityEngine;
-using Debug = UnityEngine.Debug;
 
+using System;
+using TMPro;
+using UnityEngine;
 public class DetectionErreurs : MonoBehaviour
 {
-    public GameObject popUpFelicitation;
-    public GameObject game;
-    private GameObject _composant;
-    private string _objet;
+    public GameObject proco;
+    public GameObject gpu;
+    public GameObject ram;
+    public GameObject alim;
+    private bool _erreurTrouve;
+    private const string Objet = "Tu as trouvé l'érreur, si tu as un doute tu peux toujours regarder une fois de plus." + " Sinon tu peux choisir l'erreur";
 
-    private IEnumerator Afficher()
+    private void Start()
     {
-        yield return new WaitForSeconds(1);
-        game.SetActive(false);
-        popUpFelicitation.SetActive(true);
+        proco.GetComponent<UnityEngine.UI.Button>().interactable = false;
+        ram.GetComponent<UnityEngine.UI.Button>().interactable = false;
+        gpu.GetComponent<UnityEngine.UI.Button>().interactable = false;
+        alim.GetComponent<UnityEngine.UI.Button>().interactable = false;
+    }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonUp(0) && _erreurTrouve || Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Ended && _erreurTrouve)
+        {
+            ErreurTrouve();
+        }
     }
     
+    // ReSharper disable Unity.PerformanceAnalysis
+    private void ErreurTrouve()
+    {
+        Debug.Log("changement de texte");
+        GameObject.Find("Explication").GetComponent<TextMeshProUGUI>().text = Objet;
+        
+        proco.SetActive(true);
+        ram.SetActive(true);
+        gpu.SetActive(true);
+        alim.SetActive(true);
+    }
+
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Collision" + collision.tag);
-        if (popUpFelicitation.activeSelf) 
-            return;
-            
-        Debug.Log("Collision" + this.tag);
+        _erreurTrouve = true;
 
-        switch (this.tag)
+        switch (tag)
         {
+            case "ALIM":
+                Button.SceneID = 4;
+                alim.GetComponent<UnityEngine.UI.Button>().interactable = true;
+                break;
             case "CPU":
-                Button.SceneID = 3;
+                Button.SceneID = 5;
+                proco.GetComponent<UnityEngine.UI.Button>().interactable = true;
                 break;
             case "GPU":
-                Button.SceneID = 4;
+                Button.SceneID = 6;
+                gpu.GetComponent<UnityEngine.UI.Button>().interactable = true;
                 break;
             case "RAM":
-                Button.SceneID = 5;
-                break;
-            case "ALIM":
-                Button.SceneID = 6;
+                Button.SceneID = 7;
+                ram.GetComponent<UnityEngine.UI.Button>().interactable = true;
                 break;
         }
-        
-        StartCoroutine(Afficher());
     }
 }

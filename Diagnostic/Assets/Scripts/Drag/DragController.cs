@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DragController : MonoBehaviour
 {
-    public static bool _isDragActive;
+    private static bool _isDragActive;
     private Vector2 _screenPosition;
     private Vector3 _worldPosition;
     private DragController _dragController;

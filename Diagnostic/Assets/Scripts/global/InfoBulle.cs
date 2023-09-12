@@ -2,30 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Playables;
-using UnityEngine.Serialization;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class InfoBulle : MonoBehaviour
 {
-    string _originalText;
+    private string _originalText;
     public List<GameObject> textes;
     static int _nbrTextes;
     private int _indexTextes = 0;
-    Text _uiText;
+    private Text _uiText;
     public float delay = 0.25f;
-    public GameObject explication;
-    public GameObject selectionPC;
-    public GameObject tobito;
-
-    public Animator anim;
+    private Animator _animator;
+    private static readonly int Active = Animator.StringToHash("Active");
+    private static readonly int UnActive = Animator.StringToHash("UnActive");
 
     // Start is called before the first frame update
     void Start()
     {
         Debug.Log("---InfoBulle---");
 
-        anim = tobito.GetComponent<Animator>();
+        _animator = GameObject.Find("Tobi_top").GetComponent<Animator>();
 
         _uiText = GetComponent<Text>();
         _originalText = _uiText.text;
@@ -40,13 +37,13 @@ public class InfoBulle : MonoBehaviour
      */
     IEnumerator ShowLetterByLetter()
     {
-        anim.SetTrigger("Active");
+        _animator.SetTrigger(Active);
         for (int i = 0; i <= _originalText.Length; i++)
         {
             _uiText.text = _originalText.Substring(0, i);
             yield return new WaitForSeconds(delay);
         }
-        anim.SetTrigger("UnActive");
+        _animator.SetTrigger(UnActive);
     }
 
     /**
@@ -75,17 +72,15 @@ public class InfoBulle : MonoBehaviour
         {
             Debug.Log("Fin des textes");
             FinExplication();
-            return;
         }
     }
 
     /**
      * Désactive l'objet Explication
      */
-    public void FinExplication()
+    private void FinExplication()
     {
         Debug.Log("FinExplication");
-        explication.SetActive(false);
-        selectionPC.SetActive(true);
+        SceneManager.LoadScene("2-Choix-niveau");
     }
 }

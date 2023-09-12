@@ -6,7 +6,7 @@ public class Button : MonoBehaviour
     public static int SceneID = 1;
     public static string GameObjectTag;
     public static int TypeOfError;
-    
+
     public void ChangerScene()
     {
         Debug.Log("Click");
@@ -44,8 +44,7 @@ public class Button : MonoBehaviour
             default:
                 return;
         }
-        Button.SceneID = 2;
-        SceneManager.LoadScene(SceneID);
+        SceneManager.LoadScene("3-Base-game");
     }
 
     public void Recommencer()
