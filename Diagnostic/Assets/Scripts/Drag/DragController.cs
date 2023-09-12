@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DragController : MonoBehaviour
 {
-    public static bool _isDragActive;
+    private static bool _isDragActive;
     private Vector2 _screenPosition;
     private Vector3 _worldPosition;
     private DragController _dragController;
@@ -91,7 +91,7 @@ public class DragController : MonoBehaviour
 
     private void Drag()
     {
-        lastDragged.transform.position = new Vector3(_worldPosition.x - 1, _worldPosition.y + 1);
+        lastDragged.transform.position = new Vector3(_worldPosition.x - 1, _worldPosition.y + 1, 0f);
     }
 
     public static bool FinDrag = false;

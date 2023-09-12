@@ -12,9 +12,4 @@ public class GestionBtJeuRam : MonoBehaviour
         thingToHide.SetActive(false);
         thingToShow.SetActive(true);
     }
-
-    public void clicBtSuite()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
 }

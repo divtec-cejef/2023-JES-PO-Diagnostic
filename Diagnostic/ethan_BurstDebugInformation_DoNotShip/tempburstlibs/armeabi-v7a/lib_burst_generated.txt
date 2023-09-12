@@ -138,8 +138,8 @@ Library: lib_burst_generated
 --root-assembly=C:\Users\Admin\Documents\GitHub\2023-JES-PO-Diagnostic\Diagnostic\Temp\StagingArea\Data\Managed\Unity.AdaptivePerformance.dll
 --root-assembly=C:\Users\Admin\Documents\GitHub\2023-JES-PO-Diagnostic\Diagnostic\Temp\StagingArea\Data\Managed\Unity.VisualScripting.Flow.dll
 --root-assembly=C:\Users\Admin\Documents\GitHub\2023-JES-PO-Diagnostic\Diagnostic\Temp\StagingArea\Data\Managed\Unity.Mathematics.dll
---root-assembly=C:\Users\Admin\Documents\GitHub\2023-JES-PO-Diagnostic\Diagnostic\Temp\StagingArea\Data\Managed\Unity.VisualScripting.State.dll
 --root-assembly=C:\Users\Admin\Documents\GitHub\2023-JES-PO-Diagnostic\Diagnostic\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
+--root-assembly=C:\Users\Admin\Documents\GitHub\2023-JES-PO-Diagnostic\Diagnostic\Temp\StagingArea\Data\Managed\Unity.VisualScripting.State.dll
 --root-assembly=C:\Users\Admin\Documents\GitHub\2023-JES-PO-Diagnostic\Diagnostic\Temp\StagingArea\Data\Managed\Unity.VisualScripting.Core.dll
 --root-assembly=C:\Users\Admin\Documents\GitHub\2023-JES-PO-Diagnostic\Diagnostic\Temp\StagingArea\Data\Managed\Unity.Burst.dll
 --root-assembly=C:\Users\Admin\Documents\GitHub\2023-JES-PO-Diagnostic\Diagnostic\Temp\StagingArea\Data\Managed\Unity.2D.Animation.Runtime.dll

@@ -5,30 +5,30 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Accueil.unity
+    path: Assets/Scenes/0-Accueil.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
   - enabled: 1
-    path: Assets/Scenes/ChoixNiveau.unity
-    guid: 5c513d2a62099fd408ad3bf1888e66aa
+    path: Assets/Scenes/1-Tobias.unity
+    guid: 829bf9e9b158d29479f98ef01f9958cd
   - enabled: 1
-    path: Assets/Scenes/Base-game.unity
+    path: Assets/Scenes/2-Choix-niveau.unity
+    guid: 8b948b088ab6b9c49a5a03b082813dbd
+  - enabled: 1
+    path: Assets/Scenes/3-Base-game.unity
     guid: 7c5ab3c791803134b84023e73642d040
   - enabled: 1
-    path: Assets/Scenes/CPU.unity
+    path: Assets/Scenes/4-Cable.unity
+    guid: 36ac92a47d495e04a9ad074ead384a84
+  - enabled: 1
+    path: Assets/Scenes/5-CPU.unity
     guid: ee080df645342584ea954d829d3734f1
   - enabled: 1
-    path: Assets/Scenes/Partie ram/MiniJeuxRam.unity
-    guid: 6f09c741a8e955049bcb3c5c07536d00
-  - enabled: 1
-    path: Assets/Scenes/Partie ram/Shelves.unity
-    guid: aedb721d4809f5542a21f83597fde5b8
-  - enabled: 1
-    path: Assets/Scenes/MiniJeuGPU.unity
+    path: Assets/Scenes/6-GPU.unity
     guid: 6bd053988a1082345a727531c2ba87f2
+  - enabled: 1
+    path: Assets/Scenes/7-RAM.unity
+    guid: d6e6c93d9cbc6084fae2cd8a5680e5ea
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: a1627e0dad6c1a34e8b90c269f3e524e, type: 2}
     com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: a3ec46b4caab8b5448a14b13a1a73299, type: 2}

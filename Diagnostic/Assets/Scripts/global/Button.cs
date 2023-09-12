@@ -6,16 +6,17 @@ public class Button : MonoBehaviour
     public static int SceneID = 1;
     public static string GameObjectTag;
     public static int TypeOfError;
-    
+
     public void ChangerScene()
     {
         Debug.Log("Click");
         SceneManager.LoadScene(SceneID);
     }
 
-    public void Quitter()
+    public void Exit()
     {
-        Application.Quit();
+        SceneManager.LoadScene(0);
+        Button.SceneID = 1;
     }
     
     public void ActivateError()
@@ -36,9 +37,18 @@ public class Button : MonoBehaviour
                 Debug.Log("RAM");
                 TypeOfError = 3;
                 break;
+            case "ALIM" :
+                Debug.Log("ALIM");
+                TypeOfError = 4;
+                break;
             default:
                 return;
         }
+        SceneManager.LoadScene("3-Base-game");
+    }
+
+    public void Recommencer()
+    {
         Button.SceneID = 2;
         SceneManager.LoadScene(SceneID);
     }
