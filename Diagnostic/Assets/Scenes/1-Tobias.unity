@@ -579,7 +579,7 @@ MonoBehaviour:
   - {fileID: 1335821769}
   - {fileID: 1094509741}
   - {fileID: 920863727}
-  delay: 0.1
+  delay: 0.05
 --- !u!114 &920863729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -678,7 +678,7 @@ MonoBehaviour:
   - {fileID: 1335821769}
   - {fileID: 1094509741}
   - {fileID: 920863727}
-  delay: 0.1
+  delay: 0.05
 --- !u!114 &1094509743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1050,7 +1050,7 @@ MonoBehaviour:
   - {fileID: 1335821769}
   - {fileID: 1094509741}
   - {fileID: 920863727}
-  delay: 0.1
+  delay: 0.05
 --- !u!114 &1335821771
 MonoBehaviour:
   m_ObjectHideFlags: 0
