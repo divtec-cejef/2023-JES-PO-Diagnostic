@@ -11,6 +11,7 @@ public class Nettoyage : MonoBehaviour
     private GameObject _textPoussieresActive;
     public static GameObject LeSavaisTu;
     public static GameObject handTutorial;
+    public static GameObject Game;
     private const int PoussieresRestantes = 5;
 
     private void Start()
@@ -49,6 +50,8 @@ public class Nettoyage : MonoBehaviour
             {
                 _accompli = 0;
                 LeSavaisTu.SetActive(true);
+                Game.SetActive(false);
+                
             }
         }
 
