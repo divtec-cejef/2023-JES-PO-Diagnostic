@@ -14,6 +14,7 @@ public class CpuMiniGame : MonoBehaviour
     public GameObject listePoussieres;
     public GameObject handTutorial;
     public GameObject leSavaisTu;
+    public GameObject Game;
     private GameObject _deactivate; // Le GameObject à désactiver
     
     private readonly List<GameObject> _activateList = new List<GameObject>();
@@ -38,6 +39,7 @@ public class CpuMiniGame : MonoBehaviour
 
         Nettoyage.LeSavaisTu = leSavaisTu;
         Nettoyage.handTutorial = handTutorial;
+        Nettoyage.Game = Game;
     }
 
     /**
