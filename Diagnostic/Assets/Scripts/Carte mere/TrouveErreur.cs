@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class TrouveErreur : MonoBehaviour
 {
@@ -11,6 +8,9 @@ public class TrouveErreur : MonoBehaviour
     public GameObject alimError;
     public static int NumScene = 0;
     
+    /**
+     * Selon la valeur fournie active l'erreur sur la carte mère
+     */
     private void Start()
     {
         switch (Button.TypeOfError)

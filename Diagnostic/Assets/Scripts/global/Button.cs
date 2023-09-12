@@ -44,8 +44,7 @@ public class Button : MonoBehaviour
             default:
                 return;
         }
-        Button.SceneID = 2;
-        SceneManager.LoadScene(SceneID);
+        SceneManager.LoadScene("3-Base-game");
     }
 
     public void Recommencer()

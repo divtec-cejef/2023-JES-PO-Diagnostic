@@ -1,47 +1,55 @@
-using System;
-using System.Collections;
-using System.Runtime.CompilerServices;
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-using Debug = UnityEngine.Debug;
 
 public class DetectionErreurs : MonoBehaviour
 {
-    public GameObject popUpFelicitation;
-    public GameObject game;
-    private GameObject _composant;
-    private string _objet;
+    public GameObject _proco;
+    public GameObject _gpu;
+    public GameObject _ram;
+    public GameObject _alim;
+    private bool _erreurTrouve;
+    private string _objet = "Tu as trouvé l'érreur, si tu as un doute tu peux toujours regarder une fois de plus." + 
+                            " Sinon tu peux choisir l'erreur";
 
-    private IEnumerator Afficher()
+    private void Update()
     {
-        yield return new WaitForSeconds(1);
-        game.SetActive(false);
-        popUpFelicitation.SetActive(true);
+        if (Input.GetMouseButtonUp(0) && _erreurTrouve || Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Ended && _erreurTrouve)
+        {
+            ErreurTrouve();
+        }
     }
     
+    // ReSharper disable Unity.PerformanceAnalysis
+    private void ErreurTrouve()
+    {
+        Debug.Log("changement de texte");
+        GameObject.Find("Explication").GetComponent<TextMeshProUGUI>().text = _objet;
+        
+        _proco.SetActive(true);
+        _ram.SetActive(true);
+        _gpu.SetActive(true);
+        _alim.SetActive(true);
+    }
+
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Collision" + collision.tag);
-        if (popUpFelicitation.activeSelf) 
-            return;
-            
-        Debug.Log("Collision" + this.tag);
+        _erreurTrouve = true;
 
-        switch (this.tag)
+        switch (tag)
         {
-            case "CPU":
-                Button.SceneID = 3;
-                break;
-            case "GPU":
+            case "ALIM":
                 Button.SceneID = 4;
                 break;
-            case "RAM":
+            case "CPU":
                 Button.SceneID = 5;
                 break;
-            case "ALIM":
+            case "GPU":
                 Button.SceneID = 6;
                 break;
+            case "RAM":
+                Button.SceneID = 7;
+                break;
         }
-        
-        StartCoroutine(Afficher());
     }
 }
