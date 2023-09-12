@@ -1496,7 +1496,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Bonjour jeune informaticien(ne)
+  m_Text: Bonjour jeune informaticien(ne) !
 --- !u!222 &947962083
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2498,8 +2498,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Ici tu auras le choix entre trois PC et chacun d'entre eux \xE0 un soucis
-    paritculier que tu devras r\xE9soudre"
+  m_Text: "Ici tu auras le choix entre quatre PC et chacun d'entre eux \xE0 un soucis
+    paritculier que tu devras r\xE9soudre."
 --- !u!222 &1386804370
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2966,7 +2966,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Je suis Tobi, votre soutien pour tout le reste de cette courte aventure
+  m_Text: Je suis Tobi, votre soutien pour tout le reste de cette courte aventure.
 --- !u!222 &1672166696
 CanvasRenderer:
   m_ObjectHideFlags: 0
