@@ -49,7 +49,7 @@ public class Button : MonoBehaviour
 
     public void Recommencer()
     {
-        Button.SceneID = 1;
+        Button.SceneID = 2;
         SceneManager.LoadScene(SceneID);
     }
 }
