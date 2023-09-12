@@ -13,10 +13,10 @@ public class Button : MonoBehaviour
         SceneManager.LoadScene(SceneID);
     }
 
-    public void Quitter()
+    public void Exit()
     {
-        Debug.Log("Application en cours de fermerture");
-        Application.Quit();
+        SceneManager.LoadScene(0);
+        Button.SceneID = 1;
     }
     
     public void ActivateError()
