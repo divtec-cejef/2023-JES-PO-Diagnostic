@@ -208,17 +208,17 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 6c0dd4ba9fb4b52408a4c817e427b1ff, type: 3}
-    m_FontSize: 80
+    m_FontSize: 65
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 8
+    m_MinSize: 6
     m_MaxSize: 104
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
-    m_LineSpacing: 1
+    m_LineSpacing: 1.25
   m_Text: Bienvenue dans la section informatique
 --- !u!222 &8058516
 CanvasRenderer:
@@ -333,17 +333,17 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 6c0dd4ba9fb4b52408a4c817e427b1ff, type: 3}
-    m_FontSize: 80
+    m_FontSize: 65
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 8
+    m_MinSize: 6
     m_MaxSize: 104
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
-    m_LineSpacing: 1
+    m_LineSpacing: 1.25
   m_Text: "Tu as command\xE9 une RAM pour remplacer celle d'un PC d\xE9fectueux.\nD\xE9balle
     le colis et installe la RAM dans la carte m\xE8re."
 --- !u!222 &132622632
@@ -628,7 +628,7 @@ GameObject:
   - component: {fileID: 718569386}
   - component: {fileID: 718569385}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Texte bulle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -732,6 +732,14 @@ PrefabInstance:
       propertyPath: m_FlipX
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7871556540511652807, guid: 9916994387bcb1c4dbf5e1b6a763232f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3286163911610860551, guid: 49a116fe112de3d46b626bb84834646c, type: 3}
+    - target: {fileID: -7871556540511652807, guid: 9916994387bcb1c4dbf5e1b6a763232f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: -3888481672020999207, guid: 9916994387bcb1c4dbf5e1b6a763232f, type: 3}
       propertyPath: m_Name
       value: Bulle texte
@@ -746,27 +754,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 9916994387bcb1c4dbf5e1b6a763232f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.6701968
+      value: 3.18
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 9916994387bcb1c4dbf5e1b6a763232f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.6701968
+      value: 3.18
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 9916994387bcb1c4dbf5e1b6a763232f, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.6701968
+      value: 3.18
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 9916994387bcb1c4dbf5e1b6a763232f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.2526687
+      value: 1.45
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 9916994387bcb1c4dbf5e1b6a763232f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.1625684
+      value: -0.83
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 9916994387bcb1c4dbf5e1b6a763232f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.875287
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 9916994387bcb1c4dbf5e1b6a763232f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -795,6 +803,10 @@ PrefabInstance:
     - target: {fileID: 8742538545776668643, guid: 9916994387bcb1c4dbf5e1b6a763232f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8742538545776668643, guid: 9916994387bcb1c4dbf5e1b6a763232f, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 7243324766535440047, guid: 9916994387bcb1c4dbf5e1b6a763232f, type: 3}
@@ -883,17 +895,17 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 6c0dd4ba9fb4b52408a4c817e427b1ff, type: 3}
-    m_FontSize: 80
+    m_FontSize: 65
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 8
+    m_MinSize: 6
     m_MaxSize: 104
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
-    m_LineSpacing: 1
+    m_LineSpacing: 1.25
   m_Text: "Les c\xE2bles de cette alimentation sont d\xE9connect\xE9s. Il faut les
     rebrancher pour la r\xE9parer."
 --- !u!222 &988730980
@@ -1239,18 +1251,19 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 6c0dd4ba9fb4b52408a4c817e427b1ff, type: 3}
-    m_FontSize: 80
+    m_FontSize: 65
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 8
+    m_MinSize: 6
     m_MaxSize: 104
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
-    m_LineSpacing: 1
-  m_Text: Bienvenue dans la section informatique
+    m_LineSpacing: 1.25
+  m_Text: "Bienvenue dans la section informatique.\nJe suis Tobi votre guide.\nAllons
+    ensemble r\xE9parer quelques PC."
 --- !u!222 &1335821772
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1539,17 +1552,17 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 6c0dd4ba9fb4b52408a4c817e427b1ff, type: 3}
-    m_FontSize: 80
+    m_FontSize: 65
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 8
+    m_MinSize: 6
     m_MaxSize: 104
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
-    m_LineSpacing: 1
+    m_LineSpacing: 1.25
   m_Text: "On dirait que des d\xE9chets bloquent le ventilateur de la carte graphique,
     il faut les retirer !"
 --- !u!222 &1749624912
@@ -1853,17 +1866,17 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 6c0dd4ba9fb4b52408a4c817e427b1ff, type: 3}
-    m_FontSize: 80
+    m_FontSize: 65
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 8
+    m_MinSize: 6
     m_MaxSize: 104
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
-    m_LineSpacing: 1
+    m_LineSpacing: 1.25
   m_Text: "On dirait que le processeur est poussi\xE9reux, c'est certainement la
     raison de sa lenteur"
 --- !u!222 &2023566529

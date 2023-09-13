@@ -40,6 +40,15 @@ public class CpuMiniGame : MonoBehaviour
         Nettoyage.LeSavaisTu = leSavaisTu;
         Nettoyage.handTutorial = handTutorial;
         Nettoyage.Game = Game;
+        
+        _deactivate.SetActive(false);
+        foreach (var a in _activateList)
+        {
+            a.SetActive(true);
+        }
+
+        listePoussieres.SetActive(true);
+        InstantiateDust();
     }
 
     /**
@@ -63,21 +72,5 @@ public class CpuMiniGame : MonoBehaviour
             Instantiate(objectPrefab, randomPosition, Quaternion.identity);
             Debug.Log("CpuMiniGame.InstantiateDust() " + objectPrefab);
         }
-    }
-
-    /**
-     * Active le GameObject aActiver et désactive le GameObject aDesactiver
-     * Appelle LauchDust()
-     */
-    public void OnClick()
-    {
-        _deactivate.SetActive(false);
-        foreach (var a in _activateList)
-        {
-            a.SetActive(true);
-        }
-
-        listePoussieres.SetActive(true);
-        InstantiateDust();
     }
 }
