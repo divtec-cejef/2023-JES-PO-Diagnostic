@@ -123,6 +123,257 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &8058512
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8058513}
+  - component: {fileID: 8058516}
+  - component: {fileID: 8058515}
+  - component: {fileID: 8058514}
+  - component: {fileID: 8058517}
+  m_Layer: 5
+  m_Name: "Ex_Pr\xE9sentation (1)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &8058513
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8058512}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 718569384}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 29.37, y: 77.53}
+  m_SizeDelta: {x: 838.97, y: 546.86}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8058514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8058512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd88deae77b7d254db4ebe4d827d6bb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "exPr\xE9sentation": {fileID: 1335821769}
+  "exPr\xE9sentation2": {fileID: 8058512}
+  exCPU: {fileID: 2023566525}
+  exGPU: {fileID: 1749624908}
+  exRam: {fileID: 132622628}
+  exAlim: {fileID: 988730976}
+  textes:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  delay: 0.05
+--- !u!114 &8058515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8058512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 6c0dd4ba9fb4b52408a4c817e427b1ff, type: 3}
+    m_FontSize: 80
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 8
+    m_MaxSize: 104
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: Bienvenue dans la section informatique
+--- !u!222 &8058516
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8058512}
+  m_CullTransparentMesh: 1
+--- !u!114 &8058517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8058512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd88deae77b7d254db4ebe4d827d6bb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "exPr\xE9sentation": {fileID: 0}
+  "exPr\xE9sentation2": {fileID: 0}
+  exCPU: {fileID: 0}
+  exGPU: {fileID: 0}
+  exRam: {fileID: 0}
+  exAlim: {fileID: 0}
+  textes: []
+  delay: 0.05
+--- !u!1 &132622628
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 132622629}
+  - component: {fileID: 132622632}
+  - component: {fileID: 132622631}
+  - component: {fileID: 132622630}
+  - component: {fileID: 132622633}
+  m_Layer: 5
+  m_Name: Ex_RAM
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &132622629
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132622628}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 718569384}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 29.37, y: 77.53}
+  m_SizeDelta: {x: 838.97, y: 546.86}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &132622630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132622628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd88deae77b7d254db4ebe4d827d6bb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "exPr\xE9sentation": {fileID: 1335821769}
+  "exPr\xE9sentation2": {fileID: 8058512}
+  exCPU: {fileID: 2023566525}
+  exGPU: {fileID: 1749624908}
+  exRam: {fileID: 132622628}
+  exAlim: {fileID: 988730976}
+  textes:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  delay: 0.05
+--- !u!114 &132622631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132622628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 6c0dd4ba9fb4b52408a4c817e427b1ff, type: 3}
+    m_FontSize: 80
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 8
+    m_MaxSize: 104
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "Tu as command\xE9 une RAM pour remplacer celle d'un PC d\xE9fectueux.\nD\xE9balle
+    le colis et installe la RAM dans la carte m\xE8re."
+--- !u!222 &132622632
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132622628}
+  m_CullTransparentMesh: 1
+--- !u!114 &132622633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132622628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd88deae77b7d254db4ebe4d827d6bb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "exPr\xE9sentation": {fileID: 0}
+  "exPr\xE9sentation2": {fileID: 0}
+  exCPU: {fileID: 0}
+  exGPU: {fileID: 0}
+  exRam: {fileID: 0}
+  exAlim: {fileID: 0}
+  textes: []
+  delay: 0.05
 --- !u!4 &208400349 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8742538545776668643, guid: 9916994387bcb1c4dbf5e1b6a763232f, type: 3}
@@ -396,8 +647,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1335821773}
-  - {fileID: 1094509745}
-  - {fileID: 920863731}
+  - {fileID: 8058513}
+  - {fileID: 988730977}
+  - {fileID: 2023566526}
+  - {fileID: 1749624909}
+  - {fileID: 132622629}
   m_Father: {fileID: 1958644436}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -456,7 +710,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 1103721828}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -544,7 +798,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 7243324766535440047, guid: 9916994387bcb1c4dbf5e1b6a763232f, type: 3}
---- !u!1 &920863727
+--- !u!1 &988730976
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -552,84 +806,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 920863731}
-  - component: {fileID: 920863730}
-  - component: {fileID: 920863729}
-  - component: {fileID: 920863728}
+  - component: {fileID: 988730977}
+  - component: {fileID: 988730980}
+  - component: {fileID: 988730979}
+  - component: {fileID: 988730978}
+  - component: {fileID: 988730981}
   m_Layer: 5
-  m_Name: Ex_Bonjour (2)
+  m_Name: Ex_Cable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &920863728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 920863727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd88deae77b7d254db4ebe4d827d6bb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textes:
-  - {fileID: 1335821769}
-  - {fileID: 1094509741}
-  - {fileID: 920863727}
-  delay: 0.05
---- !u!114 &920863729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 920863727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 6c0dd4ba9fb4b52408a4c817e427b1ff, type: 3}
-    m_FontSize: 80
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 8
-    m_MaxSize: 104
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 1
-    m_LineSpacing: 1
-  m_Text: "Ici tu auras le choix entre trois PC et chacun d'entre eux \xE0 un soucis
-    paritculier que tu devras r\xE9soudre"
---- !u!222 &920863730
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 920863727}
-  m_CullTransparentMesh: 1
---- !u!224 &920863731
+--- !u!224 &988730977
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 920863727}
+  m_GameObject: {fileID: 988730976}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -643,49 +838,36 @@ RectTransform:
   m_AnchoredPosition: {x: 29.37, y: 77.53}
   m_SizeDelta: {x: 838.97, y: 546.86}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1094509741
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1094509745}
-  - component: {fileID: 1094509744}
-  - component: {fileID: 1094509743}
-  - component: {fileID: 1094509742}
-  m_Layer: 5
-  m_Name: Ex_Bonjour (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1094509742
+--- !u!114 &988730978
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1094509741}
+  m_GameObject: {fileID: 988730976}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd88deae77b7d254db4ebe4d827d6bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  "exPr\xE9sentation": {fileID: 1335821769}
+  "exPr\xE9sentation2": {fileID: 8058512}
+  exCPU: {fileID: 2023566525}
+  exGPU: {fileID: 1749624908}
+  exRam: {fileID: 132622628}
+  exAlim: {fileID: 988730976}
   textes:
-  - {fileID: 1335821769}
-  - {fileID: 1094509741}
-  - {fileID: 920863727}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   delay: 0.05
---- !u!114 &1094509743
+--- !u!114 &988730979
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1094509741}
+  m_GameObject: {fileID: 988730976}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
@@ -712,35 +894,36 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Je suis Tobi, votre soutien pour tout le reste de cette courte aventure
---- !u!222 &1094509744
+  m_Text: "Les c\xE2bles de cette alimentation sont d\xE9connect\xE9s. Il faut les
+    rebrancher pour la r\xE9parer."
+--- !u!222 &988730980
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1094509741}
+  m_GameObject: {fileID: 988730976}
   m_CullTransparentMesh: 1
---- !u!224 &1094509745
-RectTransform:
+--- !u!114 &988730981
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1094509741}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 718569384}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 29.37, y: 77.53}
-  m_SizeDelta: {x: 838.97, y: 546.86}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_GameObject: {fileID: 988730976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd88deae77b7d254db4ebe4d827d6bb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "exPr\xE9sentation": {fileID: 0}
+  "exPr\xE9sentation2": {fileID: 0}
+  exCPU: {fileID: 0}
+  exGPU: {fileID: 0}
+  exRam: {fileID: 0}
+  exAlim: {fileID: 0}
+  textes: []
+  delay: 0.05
 --- !u!1 &1103721826
 GameObject:
   m_ObjectHideFlags: 0
@@ -1026,31 +1209,14 @@ GameObject:
   - component: {fileID: 1335821773}
   - component: {fileID: 1335821772}
   - component: {fileID: 1335821771}
-  - component: {fileID: 1335821770}
+  - component: {fileID: 1335821774}
   m_Layer: 5
-  m_Name: Ex_Bonjour
+  m_Name: "Ex_Pr\xE9sentation"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1335821770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1335821769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd88deae77b7d254db4ebe4d827d6bb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textes:
-  - {fileID: 1335821769}
-  - {fileID: 1094509741}
-  - {fileID: 920863727}
-  delay: 0.05
 --- !u!114 &1335821771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1084,7 +1250,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Bonjour jeune informaticien(ne)
+  m_Text: Bienvenue dans la section informatique
 --- !u!222 &1335821772
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1113,6 +1279,26 @@ RectTransform:
   m_AnchoredPosition: {x: 29.37, y: 77.53}
   m_SizeDelta: {x: 838.97, y: 546.86}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1335821774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335821769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd88deae77b7d254db4ebe4d827d6bb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "exPr\xE9sentation": {fileID: 1335821769}
+  "exPr\xE9sentation2": {fileID: 8058512}
+  exCPU: {fileID: 2023566525}
+  exGPU: {fileID: 1749624908}
+  exRam: {fileID: 132622628}
+  exAlim: {fileID: 988730976}
+  textes: []
+  delay: 0.05
 --- !u!1 &1741665790
 GameObject:
   m_ObjectHideFlags: 0
@@ -1260,11 +1446,140 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd88deae77b7d254db4ebe4d827d6bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  "exPr\xE9sentation": {fileID: 1335821769}
+  "exPr\xE9sentation2": {fileID: 8058512}
+  exCPU: {fileID: 2023566525}
+  exGPU: {fileID: 1749624908}
+  exRam: {fileID: 132622628}
+  exAlim: {fileID: 988730976}
+  textes: []
+  delay: 0.05
+--- !u!1 &1749624908
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1749624909}
+  - component: {fileID: 1749624912}
+  - component: {fileID: 1749624911}
+  - component: {fileID: 1749624910}
+  - component: {fileID: 1749624913}
+  m_Layer: 5
+  m_Name: Ex_GPU
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1749624909
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749624908}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 718569384}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 29.37, y: 77.53}
+  m_SizeDelta: {x: 838.97, y: 546.86}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1749624910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749624908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd88deae77b7d254db4ebe4d827d6bb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "exPr\xE9sentation": {fileID: 1335821769}
+  "exPr\xE9sentation2": {fileID: 8058512}
+  exCPU: {fileID: 2023566525}
+  exGPU: {fileID: 1749624908}
+  exRam: {fileID: 132622628}
+  exAlim: {fileID: 988730976}
   textes:
-  - {fileID: 1335821769}
-  - {fileID: 1094509741}
-  - {fileID: 920863727}
-  delay: 0.25
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  delay: 0.05
+--- !u!114 &1749624911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749624908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 6c0dd4ba9fb4b52408a4c817e427b1ff, type: 3}
+    m_FontSize: 80
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 8
+    m_MaxSize: 104
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "On dirait que des d\xE9chets bloquent le ventilateur de la carte graphique,
+    il faut les retirer !"
+--- !u!222 &1749624912
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749624908}
+  m_CullTransparentMesh: 1
+--- !u!114 &1749624913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749624908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd88deae77b7d254db4ebe4d827d6bb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "exPr\xE9sentation": {fileID: 0}
+  "exPr\xE9sentation2": {fileID: 0}
+  exCPU: {fileID: 0}
+  exGPU: {fileID: 0}
+  exRam: {fileID: 0}
+  exAlim: {fileID: 0}
+  textes: []
+  delay: 0.05
 --- !u!1 &1914740999
 GameObject:
   m_ObjectHideFlags: 0
@@ -1453,3 +1768,129 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2023566525
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2023566526}
+  - component: {fileID: 2023566529}
+  - component: {fileID: 2023566528}
+  - component: {fileID: 2023566527}
+  - component: {fileID: 2023566530}
+  m_Layer: 5
+  m_Name: Ex_CPU
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &2023566526
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023566525}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 718569384}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 29.37, y: 77.53}
+  m_SizeDelta: {x: 838.97, y: 546.86}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2023566527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023566525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd88deae77b7d254db4ebe4d827d6bb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "exPr\xE9sentation": {fileID: 1335821769}
+  "exPr\xE9sentation2": {fileID: 8058512}
+  exCPU: {fileID: 2023566525}
+  exGPU: {fileID: 1749624908}
+  exRam: {fileID: 132622628}
+  exAlim: {fileID: 988730976}
+  textes:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  delay: 0.05
+--- !u!114 &2023566528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023566525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 6c0dd4ba9fb4b52408a4c817e427b1ff, type: 3}
+    m_FontSize: 80
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 8
+    m_MaxSize: 104
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "On dirait que le processeur est poussi\xE9reux, c'est certainement la
+    raison de sa lenteur"
+--- !u!222 &2023566529
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023566525}
+  m_CullTransparentMesh: 1
+--- !u!114 &2023566530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023566525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd88deae77b7d254db4ebe4d827d6bb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "exPr\xE9sentation": {fileID: 0}
+  "exPr\xE9sentation2": {fileID: 0}
+  exCPU: {fileID: 0}
+  exGPU: {fileID: 0}
+  exRam: {fileID: 0}
+  exAlim: {fileID: 0}
+  textes: []
+  delay: 0.05

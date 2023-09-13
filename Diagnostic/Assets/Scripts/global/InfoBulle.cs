@@ -1,18 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class InfoBulle : MonoBehaviour
 {
+    public GameObject exPrésentation;
+    public GameObject exPrésentation2;
+    public GameObject exCPU;
+    public GameObject exGPU;
+    public GameObject exRam;
+    public GameObject exAlim;
+    
     private string _originalText;
     public List<GameObject> textes;
     static int _nbrTextes;
-    private int _indexTextes = 0;
+    private int _indexTextes;
     private Text _uiText;
-    public float delay = 0.25f;
+    public float delay = 0.05f;
     private Animator _animator;
     private static readonly int Active = Animator.StringToHash("Active");
     private static readonly int UnActive = Animator.StringToHash("UnActive");
@@ -23,29 +30,28 @@ public class InfoBulle : MonoBehaviour
         Debug.Log("---InfoBulle---");
 
         _animator = GameObject.Find("Tobi_top").GetComponent<Animator>();
-
-        _uiText = GetComponent<Text>();
-        _originalText = _uiText.text;
-        _uiText.text = null;
-        _nbrTextes = textes.Count;
         
-        StartCoroutine(ShowLetterByLetter());
-    }
-
-    /**
-     * affiche le texte lettre par lettre
-     */
-    IEnumerator ShowLetterByLetter()
-    {
-        _animator.SetTrigger(Active);
-        for (int i = 0; i <= _originalText.Length; i++)
+        exPrésentation.SetActive(false);
+        
+        switch (Button.TypeOfError)
         {
-            _uiText.text = _originalText.Substring(0, i);
-            yield return new WaitForSeconds(delay);
+            case 1:
+                exCPU.SetActive(true);
+                break;
+            case 2:
+                exGPU.SetActive(true);
+                break;
+            case 3:
+                exRam.SetActive(true);
+                break;
+            case 4:
+                exAlim.SetActive(true);
+                break;
+            default:
+                exPrésentation.SetActive(true);
+                break;
         }
-        _animator.SetTrigger(UnActive);
     }
-
     /**
      * Lors du clic sur le bouton suivant, on désactive le texte actuel et on active le suivant
      */
@@ -56,17 +62,9 @@ public class InfoBulle : MonoBehaviour
         Debug.Log("nbrTextes = " + _nbrTextes);
         if (_indexTextes < _nbrTextes - 1)
         {
-            // désactive le texte actuel et active le suivant
-            textes[_indexTextes].SetActive(false);
-            _indexTextes++;
-            textes[_indexTextes].SetActive(true);
-
-            // Capture le texte puis l'affiche lettre par lettre grace à la coroutine 
-            _uiText = GetComponent<Text>();
-            _originalText = _uiText.text;
-            _uiText.text = null;
-
-            StartCoroutine(ShowLetterByLetter());
+            Debug.Log("TextSuivant");
+            exPrésentation.SetActive(false);
+            exPrésentation2.SetActive(true);
         }
         else // Si plus de texte on appelle la fonction FinExplication
         {
@@ -81,6 +79,24 @@ public class InfoBulle : MonoBehaviour
     private void FinExplication()
     {
         Debug.Log("FinExplication");
-        SceneManager.LoadScene("2-Choix-niveau");
+        switch (Button.TypeOfError)
+        {
+            case 1:
+                Button.SceneID = 5;
+                break;
+            case 2:
+                Button.SceneID = 6;
+                break;
+            case 3:
+                Button.SceneID = 7;
+                break;
+            case 4:
+                Button.SceneID = 4;
+                break;
+            default:
+                Button.SceneID = 2;
+                break;
+        }
+        SceneManager.LoadScene(Button.SceneID);
     }
 }

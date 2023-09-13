@@ -10,7 +10,7 @@ public class Button : MonoBehaviour
     public void ChangerScene()
     {
         Debug.Log("Click");
-        SceneManager.LoadScene(SceneID);
+        SceneManager.LoadScene("1-Tobias");
     }
 
     public void Exit()
