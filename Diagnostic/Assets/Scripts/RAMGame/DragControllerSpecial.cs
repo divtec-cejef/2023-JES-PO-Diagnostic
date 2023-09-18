@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class DragControllerSpecial : MonoBehaviour
 {
+    private Vector3 StartPosition;
     public static bool _isDragActive;
     private Vector2 _screenPosition;
     private Vector3 _worldPosition;
@@ -13,6 +14,8 @@ public class DragControllerSpecial : MonoBehaviour
     {
         _dragController = FindObjectOfType<DragControllerSpecial>();
         _draggable = FindObjectOfType<DraggableSpecial>();
+        var transform1 = lastDragged.transform;
+        StartPosition = transform1.position;
     }
 
     void Awake()
@@ -81,10 +84,10 @@ public class DragControllerSpecial : MonoBehaviour
 
     private void Drag()
     {
-        lastDragged.transform.position = new Vector3(_worldPosition.x, 1.56f, 0f);
+        lastDragged.transform.position = new Vector3(_worldPosition.x, 1.52f, 0f);
 
-        if(_worldPosition.x < 1.9f){
-            lastDragged.transform.position = new Vector3(1.9f, 1.56f, 0f);
+        if(_worldPosition.x < StartPosition.x + 0.1f){
+            lastDragged.transform.position = new Vector3(StartPosition.x + 0.11f, 1.52f, 0f);
         }
     }
 

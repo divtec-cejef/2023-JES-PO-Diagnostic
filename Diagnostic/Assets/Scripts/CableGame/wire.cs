@@ -6,6 +6,8 @@ public class wire : MonoBehaviour
 {
     public SpriteRenderer wireEnd;
     public GameObject lightOn;
+    public GameObject lightErr;
+    public GameObject Electric;
     Vector3 startPosition;
     Vector3 startPoint;
     // Start is called before the first frame update
@@ -38,6 +40,9 @@ public class wire : MonoBehaviour
                     //finish step
                     collider.GetComponent<wire>()?.Done();
                     Done();
+                }else
+                {
+                    StartCoroutine(WrongCable());
                 }
                 
                 return;
@@ -50,6 +55,7 @@ public class wire : MonoBehaviour
 
     void Done()
     {
+        Electric.SetActive(false);
         //turn on the light
         lightOn.SetActive(true);
 
@@ -75,5 +81,16 @@ public class wire : MonoBehaviour
         //update scale
         float distance = Vector2.Distance(startPoint, newPosition);
         wireEnd.size = new Vector2(distance, wireEnd.size.y);
+    }
+
+    private IEnumerator WrongCable()
+    {
+        lightOn.SetActive(false);
+        lightErr.SetActive(true);
+        Electric.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        lightErr.SetActive(false);
+        Electric.SetActive(false);
+        lightOn.SetActive(true);
     }
 }
