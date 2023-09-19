@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Nettoyage : MonoBehaviour
@@ -29,8 +30,6 @@ public class Nettoyage : MonoBehaviour
 
         // Initialisez la couleur cible à la couleur d'origine
         _targetColor = _originalColor;
-
-        _textPoussieresActive.GetComponent<Text>().text = "Poussières restantes : " + CpuMiniGame.NumberOfObjects;
     }
 
     private void OnMouseExit()
@@ -43,15 +42,11 @@ public class Nettoyage : MonoBehaviour
         {
             Destroy(_spriteRenderer.gameObject);
             _accompli += 1;
-            _textPoussieresActive.GetComponent<Text>().text =
-                "Poussières restantes : " + (PoussieresRestantes - _accompli);
 
             if (_accompli == 5)
             {
                 _accompli = 0;
-                LeSavaisTu.SetActive(true);
-                Game.SetActive(false);
-                
+                SceneManager.LoadScene("2-Choix-niveau");
             }
         }
 
