@@ -3,7 +3,13 @@ guid: 31534f9a8e777384db10e6427c4098f3
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - objectPrefab: {fileID: 1804707517538081492, guid: 9a1a492c520b024479d4e4791fd7b97e, type: 3}
+  - spawnAreaCenter: {fileID: -3888481672020999207, guid: bf749908fd6bb1f47b75d0a376856182, type: 3}
+  - spawnAreaSize: {fileID: -3888481672020999207, guid: bf749908fd6bb1f47b75d0a376856182, type: 3}
+  - cpu: {fileID: -3888481672020999207, guid: bf749908fd6bb1f47b75d0a376856182, type: 3}
+  - listePoussieres: {instanceID: 0}
+  - handTutorial: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

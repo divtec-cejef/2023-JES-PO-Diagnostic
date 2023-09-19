@@ -9,7 +9,6 @@ public class DetectionErreurs : MonoBehaviour
     public GameObject ram;
     public GameObject alim;
     private bool _erreurTrouve;
-    private const string Objet = "Tu as trouvé l'érreur, si tu as un doute tu peux toujours regarder une fois de plus." + " Sinon tu peux choisir l'erreur";
 
     private void Start()
     {
@@ -31,7 +30,6 @@ public class DetectionErreurs : MonoBehaviour
     private void ErreurTrouve()
     {
         Debug.Log("changement de texte");
-        GameObject.Find("Explication").GetComponent<TextMeshProUGUI>().text = Objet;
         
         proco.SetActive(true);
         ram.SetActive(true);
