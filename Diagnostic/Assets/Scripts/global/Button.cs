@@ -17,6 +17,7 @@ public class Button : MonoBehaviour
     {
         SceneManager.LoadScene(0);
         Button.SceneID = 1;
+        TypeOfError = 0;
     }
     
     public void ActivateError()
