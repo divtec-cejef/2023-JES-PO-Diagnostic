@@ -405,8 +405,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Suivant
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ee1850bebef057b448dfd02d9a9401d5, type: 2}
+  m_sharedMaterial: {fileID: -8165485107114212174, guid: ee1850bebef057b448dfd02d9a9401d5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -862,7 +862,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1.25
-  m_Text: "Les c\xE2bles de cette alimentation sont d\xE9connect\xE9s. Il faut les
+  m_Text: "Les c\xE2bles de cette alimentation sont d\xE9connect\xE9s, il faut les
     rebrancher pour la r\xE9parer."
 --- !u!222 &988730980
 CanvasRenderer:
@@ -1288,7 +1288,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1.25
-  m_Text: "Bienvenue dans la section informatique.\nJe suis Tobi votre guide.\nAllons
+  m_Text: "Bienvenue dans la section informatique, je suis Tobi votre guide.\nAllons
     ensemble r\xE9parer quelques PC."
 --- !u!222 &1335821772
 CanvasRenderer:
@@ -1862,7 +1862,7 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1.25
   m_Text: "On dirait que le processeur est poussi\xE9reux, c'est certainement la
-    raison de sa lenteur"
+    raison de sa lenteur."
 --- !u!222 &2023566529
 CanvasRenderer:
   m_ObjectHideFlags: 0

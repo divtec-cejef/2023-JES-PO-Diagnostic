@@ -581,7 +581,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f76a64165e42c449ef3fc2a431cc7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: 0
 --- !u!114 &539781941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -734,7 +733,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Choisis un PC \xE0 r\xE9parer"
+  m_text: "Choisis un PC \xE0 r\xE9parer !"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ee1850bebef057b448dfd02d9a9401d5, type: 2}
   m_sharedMaterial: {fileID: -8165485107114212174, guid: ee1850bebef057b448dfd02d9a9401d5, type: 2}
@@ -941,7 +940,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f76a64165e42c449ef3fc2a431cc7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: 0
 --- !u!114 &584434279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1224,7 +1222,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f76a64165e42c449ef3fc2a431cc7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: 0
 --- !u!114 &980775234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1911,7 +1908,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f76a64165e42c449ef3fc2a431cc7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: 0
 --- !u!114 &1530168970
 MonoBehaviour:
   m_ObjectHideFlags: 0

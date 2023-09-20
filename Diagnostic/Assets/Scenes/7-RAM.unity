@@ -506,8 +506,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ouvre le carton \xE0 l'aide du cutter et replace la RAM sur la carte m\xE8re
-    au-dessus de moi"
+  m_text: "Ouvres le carton \xE0 l'aide du cutter et installes la RAM sur la carte
+    m\xE8re au-dessus de moi !"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ee1850bebef057b448dfd02d9a9401d5, type: 2}
   m_sharedMaterial: {fileID: -8165485107114212174, guid: ee1850bebef057b448dfd02d9a9401d5, type: 2}
@@ -1811,11 +1811,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 8d59a3120b75681468f459f83d715000, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.32
+      value: 2.96
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 8d59a3120b75681468f459f83d715000, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.27
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 8d59a3120b75681468f459f83d715000, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2455,7 +2455,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1941218506}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.17, y: -0.16, z: 0}
+  m_LocalPosition: {x: -0.13, y: -0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
