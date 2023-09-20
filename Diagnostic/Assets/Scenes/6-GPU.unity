@@ -210,18 +210,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -3888481672020999207, guid: cfaee898dc5433b4a837ee552186f830, type: 3}
   m_PrefabInstance: {fileID: 4856292}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4856295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4856294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe194b1caa8e493188570ef125d71d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &4856296
 Animator:
   serializedVersion: 5
@@ -2744,7 +2732,7 @@ SpriteRenderer:
   m_Size: {x: 5, y: 5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2130363535
