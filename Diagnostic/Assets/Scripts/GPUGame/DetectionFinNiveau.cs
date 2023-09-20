@@ -32,6 +32,6 @@ public class DetectionFinNiveau : MonoBehaviour
 
     private void finDEtape()
     {
-        SceneManager.LoadScene("2-Choix-niveau");
+        SceneManager.LoadScene("8-Tobias-fin");
     }
 }

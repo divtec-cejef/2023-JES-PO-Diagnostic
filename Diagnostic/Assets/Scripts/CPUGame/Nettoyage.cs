@@ -46,7 +46,7 @@ public class Nettoyage : MonoBehaviour
             if (_accompli == 5)
             {
                 _accompli = 0;
-                SceneManager.LoadScene("2-Choix-niveau");
+                SceneManager.LoadScene("8-Tobias-fin");
             }
         }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RamDrag : MonoBehaviour
 {
@@ -17,8 +18,7 @@ public class RamDrag : MonoBehaviour
     private IEnumerator FinDeNiveau()
     {
         yield return new WaitForSeconds(1);
-        Game.SetActive(false);
-        FinNiv.SetActive(true);
+        SceneManager.LoadScene("8-Tobias-fin");
 
     }
 
