@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 10752808}
   m_Layer: 5
   m_Name: CPU
-  m_TagString: Untagged
+  m_TagString: CPU
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -210,7 +210,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 10752808}
         m_TargetAssemblyTypeName: Button, Assembly-CSharp
-        m_MethodName: ChangerScene
+        m_MethodName: BoutonErreur
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -330,7 +330,7 @@ GameObject:
   - component: {fileID: 38042628}
   m_Layer: 5
   m_Name: Alimentation
-  m_TagString: Untagged
+  m_TagString: ALIM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -402,7 +402,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 10752808}
         m_TargetAssemblyTypeName: Button, Assembly-CSharp
-        m_MethodName: ChangerScene
+        m_MethodName: BoutonErreur
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6107,7 +6107,7 @@ GameObject:
   - component: {fileID: 486071202}
   m_Layer: 5
   m_Name: GPU
-  m_TagString: Untagged
+  m_TagString: GPU
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6179,7 +6179,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 10752808}
         m_TargetAssemblyTypeName: Button, Assembly-CSharp
-        m_MethodName: ChangerScene
+        m_MethodName: BoutonErreur
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11491,7 +11491,7 @@ GameObject:
   - component: {fileID: 903086824}
   - component: {fileID: 903086823}
   m_Layer: 5
-  m_Name: Texte bouton
+  m_Name: Texte
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17084,7 +17084,7 @@ GameObject:
   - component: {fileID: 1421699725}
   m_Layer: 5
   m_Name: RAM
-  m_TagString: Untagged
+  m_TagString: RAM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17156,7 +17156,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 10752808}
         m_TargetAssemblyTypeName: Button, Assembly-CSharp
-        m_MethodName: ChangerScene
+        m_MethodName: BoutonErreur
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
