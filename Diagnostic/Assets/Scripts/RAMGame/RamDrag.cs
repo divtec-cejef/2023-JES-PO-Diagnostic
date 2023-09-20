@@ -5,7 +5,6 @@ using UnityEngine;
 public class RamDrag : MonoBehaviour
 {
     public GameObject Game;
-    public GameObject TextOK;
     public GameObject FinNiv;
     public GameObject Ram;
     private Animator myAnim;
@@ -17,7 +16,6 @@ public class RamDrag : MonoBehaviour
 
     private IEnumerator FinDeNiveau()
     {
-        TextOK.SetActive(true);
         yield return new WaitForSeconds(1);
         Game.SetActive(false);
         FinNiv.SetActive(true);
