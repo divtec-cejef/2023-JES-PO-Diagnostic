@@ -211,11 +211,11 @@ MonoBehaviour:
       - m_Target: {fileID: 10752808}
         m_TargetAssemblyTypeName: Button, Assembly-CSharp
         m_MethodName: ChangerScene
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -270,7 +270,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f76a64165e42c449ef3fc2a431cc7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: 5
 --- !u!1 &12505117
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,7 +313,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &38042623
 GameObject:
@@ -404,11 +403,11 @@ MonoBehaviour:
       - m_Target: {fileID: 10752808}
         m_TargetAssemblyTypeName: Button, Assembly-CSharp
         m_MethodName: ChangerScene
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -463,7 +462,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f76a64165e42c449ef3fc2a431cc7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: 4
 --- !u!1 &121073477
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,7 +596,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3625102570027995288, guid: 024d6a1bfc26acd45b79755c2ea6d092, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3625102570027995288, guid: 024d6a1bfc26acd45b79755c2ea6d092, type: 3}
       propertyPath: m_LocalScale.x
@@ -6076,11 +6074,11 @@ MonoBehaviour:
       - m_Target: {fileID: 10752808}
         m_TargetAssemblyTypeName: Button, Assembly-CSharp
         m_MethodName: ChangerScene
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 6
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6135,7 +6133,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f76a64165e42c449ef3fc2a431cc7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: 6
 --- !u!1 &546419825
 GameObject:
   m_ObjectHideFlags: 0
@@ -6202,7 +6199,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &588242578
 PrefabInstance:
@@ -11459,7 +11456,7 @@ RectTransform:
   m_Children:
   - {fileID: 357517229}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -11516,7 +11513,6 @@ MonoBehaviour:
   cpu: {fileID: 10752803}
   gpu: {fileID: 486071197}
   ram: {fileID: 1421699720}
-  text: {fileID: 0}
 --- !u!61 &934876180
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16696,7 +16692,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1143477492
 GameObject:
@@ -16780,7 +16776,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1268213121 stripped
 Transform:
@@ -16804,7 +16800,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 49a116fe112de3d46b626bb84834646c, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 49a116fe112de3d46b626bb84834646c, type: 3}
       propertyPath: m_LocalScale.x
@@ -17042,11 +17038,11 @@ MonoBehaviour:
       - m_Target: {fileID: 10752808}
         m_TargetAssemblyTypeName: Button, Assembly-CSharp
         m_MethodName: ChangerScene
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 7
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -17101,7 +17097,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f76a64165e42c449ef3fc2a431cc7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: 7
 --- !u!1 &1429738863
 GameObject:
   m_ObjectHideFlags: 0
@@ -17888,7 +17883,6 @@ MonoBehaviour:
   cpu: {fileID: 10752803}
   gpu: {fileID: 486071197}
   ram: {fileID: 1421699720}
-  text: {fileID: 0}
 --- !u!1001 &1723014013
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18085,7 +18079,7 @@ Transform:
   - {fileID: 1367938811}
   - {fileID: 121073481}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1813820231
 MonoBehaviour:
@@ -18181,7 +18175,6 @@ MonoBehaviour:
   cpu: {fileID: 10752803}
   gpu: {fileID: 486071197}
   ram: {fileID: 1421699720}
-  text: {fileID: 0}
 --- !u!1 &1846615873
 GameObject:
   m_ObjectHideFlags: 0
@@ -23192,7 +23185,7 @@ RectTransform:
   - {fileID: 486071198}
   - {fileID: 1421699721}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -23362,7 +23355,6 @@ MonoBehaviour:
   cpu: {fileID: 10752803}
   gpu: {fileID: 486071197}
   ram: {fileID: 1421699720}
-  text: {fileID: 0}
 --- !u!1 &2031364675
 GameObject:
   m_ObjectHideFlags: 0

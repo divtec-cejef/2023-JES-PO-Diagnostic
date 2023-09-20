@@ -10,7 +10,6 @@ public class DetectionErreurs : MonoBehaviour
     public GameObject cpu;
     public GameObject gpu;
     public GameObject ram;
-    public GameObject text;
     private bool _erreurTrouve;
 
     private void Start()
@@ -38,7 +37,6 @@ public class DetectionErreurs : MonoBehaviour
         ram.SetActive(true);
         gpu.SetActive(true);
         alim.SetActive(true);
-        text.SetActive(true);
     }
 
     public void OnTriggerEnter2D(Collider2D collision)

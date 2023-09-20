@@ -1,19 +1,19 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class Button : MonoBehaviour
 {
     public static int SceneID = 1;
-    public int Scene = 0;
     public static string GameObjectTag;
     public static int TypeOfError;
 
-    public void ChangerScene()
+    public void ChangerScene(int scene)
     {
-        Debug.Log("Click");
-        SceneManager.LoadScene(Scene);
+        Debug.Log("ChangerScene(int scene) Changement à la scène " + scene);
+        SceneManager.LoadScene(scene);
     }
-
+    
     public void Exit()
     {
         SceneManager.LoadScene(0);

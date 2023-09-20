@@ -175,6 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd88deae77b7d254db4ebe4d827d6bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulle: {fileID: 0}
 --- !u!114 &8058515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,6 +230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd88deae77b7d254db4ebe4d827d6bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulle: {fileID: 0}
 --- !u!1 &132622628
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,6 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd88deae77b7d254db4ebe4d827d6bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulle: {fileID: 0}
 --- !u!114 &132622631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -336,6 +339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd88deae77b7d254db4ebe4d827d6bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulle: {fileID: 0}
 --- !u!4 &208400349 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8742538545776668643, guid: 9916994387bcb1c4dbf5e1b6a763232f, type: 3}
@@ -824,6 +828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd88deae77b7d254db4ebe4d827d6bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulle: {fileID: 0}
 --- !u!114 &988730979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -879,6 +884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd88deae77b7d254db4ebe4d827d6bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulle: {fileID: 0}
 --- !u!1 &1103721826
 GameObject:
   m_ObjectHideFlags: 0
@@ -1324,6 +1330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd88deae77b7d254db4ebe4d827d6bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulle: {fileID: 0}
 --- !u!1 &1741665790
 GameObject:
   m_ObjectHideFlags: 0
@@ -1412,11 +1419,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1741665795}
         m_TargetAssemblyTypeName: Button, Assembly-CSharp
         m_MethodName: ChangerScene
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1471,7 +1478,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f76a64165e42c449ef3fc2a431cc7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: 2
 --- !u!1 &1749624908
 GameObject:
   m_ObjectHideFlags: 0
@@ -1524,6 +1530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd88deae77b7d254db4ebe4d827d6bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulle: {fileID: 0}
 --- !u!114 &1749624911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1579,6 +1586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd88deae77b7d254db4ebe4d827d6bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulle: {fileID: 0}
 --- !u!1 &1914740999
 GameObject:
   m_ObjectHideFlags: 0
@@ -1819,6 +1827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd88deae77b7d254db4ebe4d827d6bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulle: {fileID: 0}
 --- !u!114 &2023566528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1874,3 +1883,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd88deae77b7d254db4ebe4d827d6bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulle: {fileID: 0}

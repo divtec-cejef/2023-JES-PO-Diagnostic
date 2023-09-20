@@ -1488,7 +1488,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1993028283}
         m_TargetAssemblyTypeName: Button, Assembly-CSharp
         m_MethodName: ChangerScene
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1547,7 +1547,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f76a64165e42c449ef3fc2a431cc7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: 1
 --- !u!95 &1993028284
 Animator:
   serializedVersion: 5
