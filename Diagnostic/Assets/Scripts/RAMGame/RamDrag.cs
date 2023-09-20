@@ -7,6 +7,13 @@ public class RamDrag : MonoBehaviour
     public GameObject Game;
     public GameObject TextOK;
     public GameObject FinNiv;
+    public GameObject Ram;
+    private Animator myAnim;
+
+    private void Start()
+    {
+        myAnim = Ram.GetComponent<Animator>();
+    }
 
     private IEnumerator FinDeNiveau()
     {
@@ -29,7 +36,13 @@ public class RamDrag : MonoBehaviour
     {
         if (DetectRam.OnMotherboard)
         {
-            StartCoroutine(FinDeNiveau());
+            myAnim.enabled = true;
         }
+    }
+
+    private void FinAnim()
+    {   
+        myAnim.Play("ram_ok");        
+        StartCoroutine(FinDeNiveau());
     }
 }
