@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VectorGraphics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class main : MonoBehaviour
 {
@@ -20,8 +22,7 @@ public class main : MonoBehaviour
     private IEnumerator FinDeNiveau()
     {
         yield return new WaitForSeconds(1);
-        Game.SetActive(false);
-        finNiv.SetActive(true);
+        SceneManager.LoadScene("8-Tobias-fin");
 
     }
     public void OnCableOn(int points)

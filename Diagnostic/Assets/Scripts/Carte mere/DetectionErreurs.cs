@@ -2,17 +2,20 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
+
 public class DetectionErreurs : MonoBehaviour
 {
-    public GameObject proco;
+    public GameObject alim;
+    public GameObject cpu;
     public GameObject gpu;
     public GameObject ram;
-    public GameObject alim;
+    public GameObject text;
     private bool _erreurTrouve;
 
     private void Start()
     {
-        proco.GetComponent<UnityEngine.UI.Button>().interactable = false;
+        cpu.GetComponent<UnityEngine.UI.Button>().interactable = false;
         ram.GetComponent<UnityEngine.UI.Button>().interactable = false;
         gpu.GetComponent<UnityEngine.UI.Button>().interactable = false;
         alim.GetComponent<UnityEngine.UI.Button>().interactable = false;
@@ -31,10 +34,11 @@ public class DetectionErreurs : MonoBehaviour
     {
         Debug.Log("changement de texte");
         
-        proco.SetActive(true);
+        cpu.SetActive(true);
         ram.SetActive(true);
         gpu.SetActive(true);
         alim.SetActive(true);
+        text.SetActive(true);
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -49,7 +53,7 @@ public class DetectionErreurs : MonoBehaviour
                 break;
             case "CPU":
                 Button.SceneID = 5;
-                proco.GetComponent<UnityEngine.UI.Button>().interactable = true;
+                cpu.GetComponent<UnityEngine.UI.Button>().interactable = true;
                 break;
             case "GPU":
                 Button.SceneID = 6;

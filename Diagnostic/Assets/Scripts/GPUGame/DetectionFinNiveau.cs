@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DetectionFinNiveau : MonoBehaviour
 {
@@ -31,7 +32,6 @@ public class DetectionFinNiveau : MonoBehaviour
 
     private void finDEtape()
     {
-      thingToHide.SetActive(false);
-      thingToShow.SetActive(true);      
+        SceneManager.LoadScene("2-Choix-niveau");
     }
 }

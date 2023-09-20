@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -3888481672020999207, guid: bf749908fd6bb1f47b75d0a376856182, type: 3}
       propertyPath: m_Name
-      value: cpu-svgrepo-com
+      value: CPU
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: bf749908fd6bb1f47b75d0a376856182, type: 3}
       propertyPath: m_RootOrder
@@ -536,8 +536,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 2.4399986}
+  m_SizeDelta: {x: 0.000002861023, y: 4.8800063}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &292096050
 MonoBehaviour:
@@ -588,8 +588,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 15
+  m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1429,7 +1429,7 @@ RectTransform:
   m_GameObject: {fileID: 1993028278}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 6299.1313}
-  m_LocalScale: {x: 1.36, y: 1.36, z: 1.36}
+  m_LocalScale: {x: 1.79, y: 1.79, z: 1.79}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 292096049}
@@ -1547,6 +1547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f76a64165e42c449ef3fc2a431cc7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Scene: 1
 --- !u!95 &1993028284
 Animator:
   serializedVersion: 5

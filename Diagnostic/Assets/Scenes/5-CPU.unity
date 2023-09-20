@@ -514,7 +514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectPrefab: {fileID: 1804707517538081492, guid: 9a1a492c520b024479d4e4791fd7b97e, type: 3}
   spawnAreaCenter: {fileID: 923148779}
-  spawnAreaSize: {fileID: 923148779}
+  spawnAreaSize: {fileID: 0}
   cpu: {fileID: 843556855}
   listePoussieres: {fileID: 195386030}
   handTutorial: {fileID: 929727940}
@@ -802,7 +802,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077215029}
   m_LocalRotation: {x: -0, y: -0, z: -0.3991406, w: 0.9168897}
-  m_LocalPosition: {x: -8.19, y: -2.96, z: 0}
+  m_LocalPosition: {x: -8.19, y: -0.06, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -850,7 +850,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 49a116fe112de3d46b626bb84834646c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.84
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 49a116fe112de3d46b626bb84834646c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -925,7 +925,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -568, y: 22}
+  m_AnchoredPosition: {x: -568, y: 359}
   m_SizeDelta: {x: 401.36, y: 259.76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1571498808

@@ -4,13 +4,14 @@ using UnityEngine.SceneManagement;
 public class Button : MonoBehaviour
 {
     public static int SceneID = 1;
+    public int Scene = 0;
     public static string GameObjectTag;
     public static int TypeOfError;
 
     public void ChangerScene()
     {
         Debug.Log("Click");
-        SceneManager.LoadScene("1-Tobias");
+        SceneManager.LoadScene(Scene);
     }
 
     public void Exit()
