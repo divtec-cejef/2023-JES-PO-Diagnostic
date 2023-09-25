@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,11 @@ using UnityEngine;
 public class DetectRam : MonoBehaviour
 {
     public static bool OnMotherboard = false;
+
+    private void Start()
+    {
+        OnMotherboard = false;
+    }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {

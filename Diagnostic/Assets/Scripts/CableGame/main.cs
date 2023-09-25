@@ -28,7 +28,7 @@ public class main : MonoBehaviour
 
     private IEnumerator FinDeNiveau()
     {
-        yield return new WaitForSeconds(1.4f);
+        yield return new WaitForSeconds(1);
         SceneManager.LoadScene("8-Tobias-fin");
 
     }

@@ -1634,8 +1634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numCables: 4
-  Game: {fileID: 1649318296}
-  Alim_Cover: {fileID: 1918593419}
+  alimCover: {fileID: 1918593419}
 --- !u!1 &1918593419
 GameObject:
   m_ObjectHideFlags: 0
