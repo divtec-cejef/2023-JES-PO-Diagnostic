@@ -18,8 +18,13 @@ public class DetectionPoubelle : MonoBehaviour
         _infos = GameObject.Find("infos");
     }
 
-    public void OnTriggerExit2D(Collider2D collision)
+    public void OnTriggerStay2D(Collider2D collision)
     {
+        if (DragControllerGPU.IsDragActive)
+        {
+            return;
+        }
+        
         DetectionFinNiveau.ObjetsRetires++;
         GameObject collisionGameObject = collision.gameObject;
 
@@ -45,6 +50,5 @@ public class DetectionPoubelle : MonoBehaviour
         Destroy(collisionGameObject);
 
         _hand.SetActive(false);
-        _infos.SetActive(false);
     }
 }

@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using Unity.VectorGraphics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class main : MonoBehaviour
 {
     static public main instance;
 
     public int numCables;
-    public GameObject Game;
-    public GameObject Alim_Cover;
-    private Animator animator;
-    private int onCount = 0;
+    public GameObject alimCover;
+    private Animator _animator;
+    private int _onCount = 0;
 
 
 
@@ -23,7 +23,7 @@ public class main : MonoBehaviour
 
     void Start()
     {
-        animator = Alim_Cover.GetComponent<Animator>();
+        _animator = alimCover.GetComponent<Animator>();
     }
 
     private IEnumerator FinDeNiveau()
@@ -34,10 +34,10 @@ public class main : MonoBehaviour
     }
     public void OnCableOn(int points)
     {
-        onCount = onCount + points;
-        if (onCount == numCables)
+        _onCount = _onCount + points;
+        if (_onCount == numCables)
         {
-            animator.enabled = true;
+            _animator.enabled = true;
             StartCoroutine(FinDeNiveau());
         }
     }
