@@ -1,3 +1,6 @@
+using System;
+using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,16 +10,58 @@ public class Button : MonoBehaviour
     public static string GameObjectTag;
     public static int TypeOfError;
 
-    public void ChangerScene()
+    private void Start()
     {
-        Debug.Log("Click");
-        SceneManager.LoadScene(SceneID);
+        
     }
 
+    public void ChangerScene(int scene)
+    {
+        Debug.Log("ChangerScene(int scene) Changement à la scène " + scene);
+        SceneManager.LoadScene(scene);
+    }
+
+    public void BoutonErreur(int scene)
+    {
+        var texte = GameObject.Find("Texte tobi").GetComponent<TextMeshProUGUI>();
+        
+        var gameObjectTag = this.gameObject.tag;
+        
+        Debug.Log("Type Of Error : " + TypeOfError + " tag : " + gameObjectTag);
+        
+        if (TypeOfError != 1 && this.gameObject.CompareTag("CPU"))
+        {
+            StartCoroutine(Faux(texte));
+        } else if (TypeOfError != 2 && this.gameObject.CompareTag("GPU"))
+        {
+            StartCoroutine(Faux(texte));
+        }
+        else if (TypeOfError != 3 && this.gameObject.CompareTag("RAM"))
+        {
+            StartCoroutine(Faux(texte));
+        }
+        else if (TypeOfError != 4 && this.gameObject.CompareTag("ALIM"))
+        {
+            StartCoroutine(Faux(texte));
+        }
+        else
+        {
+            ChangerScene(scene);
+        }
+    }
+    
+    IEnumerator Faux(TextMeshProUGUI texte)
+    {
+        texte.text = "Oups tu t'es trompé ce n'est pas le bon composant !";
+        yield return new WaitForSeconds(2);
+        texte.text = "Réessaye ! \n Clique sur le bon bouton !";
+    }
+    
     public void Exit()
     {
         SceneManager.LoadScene(0);
         Button.SceneID = 1;
+        TypeOfError = 0;
     }
     
     public void ActivateError()

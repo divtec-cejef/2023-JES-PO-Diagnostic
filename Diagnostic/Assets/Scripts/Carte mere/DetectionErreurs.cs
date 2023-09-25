@@ -2,22 +2,15 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
+
 public class DetectionErreurs : MonoBehaviour
 {
-    public GameObject proco;
+    public GameObject alim;
+    public GameObject cpu;
     public GameObject gpu;
     public GameObject ram;
-    public GameObject alim;
     private bool _erreurTrouve;
-    private const string Objet = "Tu as trouvé l'érreur, si tu as un doute tu peux toujours regarder une fois de plus." + " Sinon tu peux choisir l'erreur";
-
-    private void Start()
-    {
-        proco.GetComponent<UnityEngine.UI.Button>().interactable = false;
-        ram.GetComponent<UnityEngine.UI.Button>().interactable = false;
-        gpu.GetComponent<UnityEngine.UI.Button>().interactable = false;
-        alim.GetComponent<UnityEngine.UI.Button>().interactable = false;
-    }
 
     private void Update()
     {
@@ -30,37 +23,14 @@ public class DetectionErreurs : MonoBehaviour
     // ReSharper disable Unity.PerformanceAnalysis
     private void ErreurTrouve()
     {
-        Debug.Log("changement de texte");
-        GameObject.Find("Explication").GetComponent<TextMeshProUGUI>().text = Objet;
-        
-        proco.SetActive(true);
+        cpu.SetActive(true);
         ram.SetActive(true);
         gpu.SetActive(true);
         alim.SetActive(true);
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         _erreurTrouve = true;
-
-        switch (tag)
-        {
-            case "ALIM":
-                Button.SceneID = 4;
-                alim.GetComponent<UnityEngine.UI.Button>().interactable = true;
-                break;
-            case "CPU":
-                Button.SceneID = 5;
-                proco.GetComponent<UnityEngine.UI.Button>().interactable = true;
-                break;
-            case "GPU":
-                Button.SceneID = 6;
-                gpu.GetComponent<UnityEngine.UI.Button>().interactable = true;
-                break;
-            case "RAM":
-                Button.SceneID = 7;
-                ram.GetComponent<UnityEngine.UI.Button>().interactable = true;
-                break;
-        }
     }
 }
