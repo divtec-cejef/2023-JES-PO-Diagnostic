@@ -10,18 +10,25 @@ public class main : MonoBehaviour
 
     public int numCables;
     public GameObject Game;
-    public GameObject winText;
-    public GameObject finNiv;
+    public GameObject Alim_Cover;
+    private Animator animator;
     private int onCount = 0;
+
+
 
     private void Awake()
     {
         instance = this;
     }
 
+    void Start()
+    {
+        animator = Alim_Cover.GetComponent<Animator>();
+    }
+
     private IEnumerator FinDeNiveau()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1.4f);
         SceneManager.LoadScene("8-Tobias-fin");
 
     }
@@ -30,7 +37,7 @@ public class main : MonoBehaviour
         onCount = onCount + points;
         if (onCount == numCables)
         {
-            winText.SetActive(true);
+            animator.enabled = true;
             StartCoroutine(FinDeNiveau());
         }
     }
