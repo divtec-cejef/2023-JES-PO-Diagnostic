@@ -25,7 +25,9 @@ public class Button : MonoBehaviour
     {
         var texte = GameObject.Find("Texte tobi").GetComponent<TextMeshProUGUI>();
         
-        Debug.Log("Type Of Error " + TypeOfError + " tag " + this.gameObject.tag);
+        var gameObjectTag = this.gameObject.tag;
+        
+        Debug.Log("Type Of Error : " + TypeOfError + " tag : " + gameObjectTag);
         
         if (TypeOfError != 1 && this.gameObject.CompareTag("CPU"))
         {
@@ -52,7 +54,7 @@ public class Button : MonoBehaviour
     {
         texte.text = "Oups tu t'es trompé ce n'est pas le bon composant !";
         yield return new WaitForSeconds(2);
-        texte.text = "Réessaye ! \n Clique sur le bon composant !";
+        texte.text = "Réessaye ! \n Clique sur le bon bouton !";
     }
     
     public void Exit()
