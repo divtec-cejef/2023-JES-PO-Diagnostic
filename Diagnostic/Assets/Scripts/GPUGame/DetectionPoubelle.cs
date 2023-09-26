@@ -1,3 +1,5 @@
+using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Android;
 
@@ -5,17 +7,19 @@ using UnityEngine.Android;
 public class DetectionPoubelle : MonoBehaviour
 {
     private GameObject _hand;
-    private GameObject _infos;
+    public GameObject _tobiasTexteGameObject;
     public GameObject banane;
     public GameObject amongus;
     public GameObject cable;
     public GameObject duck;
     public GameObject tobias;
 
+    private TextMeshProUGUI _tobiasTexte;
+
     public void Start()
     {
         _hand = GameObject.Find("hand_tuto");
-        _infos = GameObject.Find("infos");
+        _tobiasTexte = _tobiasTexteGameObject.GetComponent<TextMeshProUGUI>();
     }
 
     public void OnTriggerStay2D(Collider2D collision)
@@ -44,11 +48,19 @@ public class DetectionPoubelle : MonoBehaviour
                 break;
             case "Tobias":
                 tobias.SetActive(true);
+                StartCoroutine(TobiasTalk());
                 break;
         }
 
         Destroy(collisionGameObject);
 
         _hand.SetActive(false);
+    }
+
+    private IEnumerator TobiasTalk()
+    {
+        _tobiasTexte.text = "Tu as trouvé mon frère  !";
+        yield return new WaitForSeconds(2);
+        _tobiasTexte.text = "Retires tous ces objets du ventilateur";
     }
 }

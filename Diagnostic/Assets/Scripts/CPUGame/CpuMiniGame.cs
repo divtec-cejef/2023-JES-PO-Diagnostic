@@ -10,7 +10,6 @@ public class CpuMiniGame : MonoBehaviour
 
     public GameObject objectPrefab; // Le prefab du GameObject à instancier
     public GameObject spawnAreaCenter; // Le centre de la zone de spawn
-    public GameObject spawnAreaSize; // La taille de la zone de spawn
     public GameObject cpu; // Le GameObject à activer
     public GameObject listePoussieres;
     public GameObject handTutorial;
@@ -45,7 +44,6 @@ public class CpuMiniGame : MonoBehaviour
         {
             // Calculez une position aléatoire dans la zone de spawn
             var position = spawnAreaCenter.transform.position;
-            var localScale = spawnAreaCenter.transform.localScale;
             var randomPosition = new Vector3(
                 Random.Range(position.x - _spawnAreaSize.x / 2, position.x + _spawnAreaSize.x / 2),
                 Random.Range(position.y - _spawnAreaSize.y / 2, position.y + _spawnAreaSize.y / 2),

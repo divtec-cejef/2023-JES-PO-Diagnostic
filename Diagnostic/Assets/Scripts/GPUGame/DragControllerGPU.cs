@@ -8,7 +8,6 @@ public class DragControllerGPU : MonoBehaviour
     private DragController _dragController;
     private Draggable _draggable;
     public Draggable lastDragged;
-    private Vector3 _basePosition;
     private float _x;
     private float _y;
     
@@ -84,7 +83,6 @@ public class DragControllerGPU : MonoBehaviour
     private void InitDrag()
     {
         var transform1 = lastDragged.transform;
-        _basePosition = transform1.position;
         IsDragActive = true;
         transform1.localScale = new Vector3(_x * 2f, _y * 2f, 0f);   
         lastDragged.GetComponent<SpriteRenderer>().sortingOrder = 35;
@@ -106,10 +104,5 @@ public class DragControllerGPU : MonoBehaviour
         if (!FinDrag) return;
         _draggable.enabled = false;
         _dragController.enabled = false;
-    }
-    
-    private void OnTriggerEnter2D(Collider2D collider2D)
-    {
-        
     }
 }

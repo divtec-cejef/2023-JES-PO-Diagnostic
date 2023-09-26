@@ -15,16 +15,16 @@ public class TrouveErreur : MonoBehaviour
     {
         switch (Button.TypeOfError)
         {
-            case 1:
+            case "CPU":
                 cpuError.SetActive(true);
                 break;
-            case 2:
+            case "GPU":
                 gpuError.SetActive(true);
                 break;
-            case 3:
+            case "RAM":
                 ramError.SetActive(true);
                 break;
-            case 4:
+            case "ALIM":
                 alimError.SetActive(true);
                 break;
         }

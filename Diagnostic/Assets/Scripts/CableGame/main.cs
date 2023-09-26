@@ -28,18 +28,16 @@ public class main : MonoBehaviour
 
     private IEnumerator FinDeNiveau()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
         SceneManager.LoadScene("8-Tobias-fin");
 
     }
     public void OnCableOn(int points)
     {
         _onCount = _onCount + points;
-        if (_onCount == numCables)
-        {
-            _animator.enabled = true;
-            StartCoroutine(FinDeNiveau());
-        }
+        if (_onCount != numCables) return;
+        _animator.enabled = true;
+        StartCoroutine(FinDeNiveau());
     }
 
 }

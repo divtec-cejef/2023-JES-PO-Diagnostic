@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -6,14 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Button : MonoBehaviour
 {
-    public static int SceneID = 1;
-    public static string GameObjectTag;
-    public static int TypeOfError;
+    private static string _gameObjectTag;
+    public static string TypeOfError;
 
-    private void Start()
-    {
-        
-    }
 
     public void ChangerScene(int scene)
     {
@@ -28,26 +22,11 @@ public class Button : MonoBehaviour
         var gameObjectTag = this.gameObject.tag;
         
         Debug.Log("Type Of Error : " + TypeOfError + " tag : " + gameObjectTag);
-        
-        if (TypeOfError != 1 && this.gameObject.CompareTag("CPU"))
-        {
-            StartCoroutine(Faux(texte));
-        } else if (TypeOfError != 2 && this.gameObject.CompareTag("GPU"))
-        {
-            StartCoroutine(Faux(texte));
-        }
-        else if (TypeOfError != 3 && this.gameObject.CompareTag("RAM"))
-        {
-            StartCoroutine(Faux(texte));
-        }
-        else if (TypeOfError != 4 && this.gameObject.CompareTag("ALIM"))
-        {
-            StartCoroutine(Faux(texte));
-        }
-        else
+
+        if (this.gameObject.CompareTag(TypeOfError)) ;
         {
             ChangerScene(scene);
-        }
+        } 
     }
     
     IEnumerator Faux(TextMeshProUGUI texte)
@@ -60,41 +39,34 @@ public class Button : MonoBehaviour
     public void Exit()
     {
         SceneManager.LoadScene(0);
-        Button.SceneID = 1;
-        TypeOfError = 0;
+        TypeOfError = null;
     }
     
     public void ActivateError()
     { 
         Debug.Log("Click");
-        GameObjectTag = this.gameObject.tag;
-        switch (GameObjectTag)
+        _gameObjectTag = this.gameObject.tag;
+        switch (_gameObjectTag)
         {
             case "CPU":
                 Debug.Log("CPU");
-                TypeOfError = 1;
+                TypeOfError = "CPU";
                 break;
             case "GPU":
                 Debug.Log("GPU");
-                TypeOfError = 2;
+                TypeOfError = "GPU";
                 break;
             case "RAM":
                 Debug.Log("RAM");
-                TypeOfError = 3;
+                TypeOfError = "RAM";
                 break;
             case "ALIM" :
                 Debug.Log("ALIM");
-                TypeOfError = 4;
+                TypeOfError = "ALIM";
                 break;
             default:
                 return;
         }
         SceneManager.LoadScene("3-Base-game");
-    }
-
-    public void Recommencer()
-    {
-        Button.SceneID = 2;
-        SceneManager.LoadScene(SceneID);
     }
 }
