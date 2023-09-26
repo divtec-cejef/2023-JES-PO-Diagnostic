@@ -7,11 +7,13 @@ public class Button : MonoBehaviour
 {
     private static string _gameObjectTag;
     public static string TypeOfError;
+    public static int exitPressés = 0;
 
 
     public void ChangerScene(int scene)
     {
         Debug.Log("ChangerScene(int scene) Changement à la scène " + scene);
+        exitPressés = 0;
         SceneManager.LoadScene(scene);
     }
 
@@ -38,8 +40,11 @@ public class Button : MonoBehaviour
     
     public void Exit()
     {
-        SceneManager.LoadScene(0);
-        TypeOfError = null;
+        exitPressés++;
+        if (exitPressés == 2)
+        {
+            ChangerScene(0);
+        }
     }
     
     public void ActivateError()
@@ -67,6 +72,7 @@ public class Button : MonoBehaviour
             default:
                 return;
         }
+        exitPressés = 0;
         SceneManager.LoadScene("3-Base-game");
     }
 }
