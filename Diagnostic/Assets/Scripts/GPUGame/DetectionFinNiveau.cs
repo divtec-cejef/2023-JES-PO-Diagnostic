@@ -30,7 +30,8 @@ public class DetectionFinNiveau : MonoBehaviour
 
     private void finDEtape()
     {
-        Button.exitPressés = 0;
+        Button.ExitPressés = 0;
+        CheckPC.CheckGPU = true;
         SceneManager.LoadScene("8-Tobias-fin");
     }
 }

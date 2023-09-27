@@ -464,7 +464,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3888481672020999207, guid: 845985cede14bb84e826655f7e243259, type: 3}
       propertyPath: m_Name
-      value: PC_droit
+      value: PC_ALIM
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 845985cede14bb84e826655f7e243259, type: 3}
       propertyPath: m_RootOrder
@@ -528,6 +528,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 7243324766535440047, guid: 845985cede14bb84e826655f7e243259, type: 3}
+--- !u!1 &466722196 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -3888481672020999207, guid: 845985cede14bb84e826655f7e243259, type: 3}
+  m_PrefabInstance: {fileID: 441614275}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &539781938
 GameObject:
   m_ObjectHideFlags: 0
@@ -823,7 +828,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3888481672020999207, guid: 9f0a0bf415a078f41abf12df44b9b3c2, type: 3}
       propertyPath: m_Name
-      value: PC_centre
+      value: PC_CPU
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 9f0a0bf415a078f41abf12df44b9b3c2, type: 3}
       propertyPath: m_RootOrder
@@ -1169,6 +1174,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 618148731}
   m_CullTransparentMesh: 1
+--- !u!1 &892786391 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -3888481672020999207, guid: 9e999b8385c5c954db10079a96246dd5, type: 3}
+  m_PrefabInstance: {fileID: 1392339351}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &980775231
 GameObject:
   m_ObjectHideFlags: 0
@@ -1760,7 +1770,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3888481672020999207, guid: 9e999b8385c5c954db10079a96246dd5, type: 3}
       propertyPath: m_Name
-      value: PC_gauche
+      value: PC_RAM
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 9e999b8385c5c954db10079a96246dd5, type: 3}
       propertyPath: m_RootOrder
@@ -1824,6 +1834,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 7243324766535440047, guid: 9e999b8385c5c954db10079a96246dd5, type: 3}
+--- !u!1 &1429777017 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -3888481672020999207, guid: 5c4125ecab3584b409c65a9dd00a4958, type: 3}
+  m_PrefabInstance: {fileID: 2139035041}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1480896612 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -3888481672020999207, guid: 9f0a0bf415a078f41abf12df44b9b3c2, type: 3}
+  m_PrefabInstance: {fileID: 576676136}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1498927724
 GameObject:
   m_ObjectHideFlags: 0
@@ -2198,6 +2218,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1837977004}
+  - component: {fileID: 1837977005}
   m_Layer: 0
   m_Name: Selection PC
   m_TagString: Untagged
@@ -2226,6 +2247,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1837977005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837977003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3fb57551b75cbc4e98bbd3d3afd4569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pcCPU: {fileID: 1480896612}
+  _pcGPU: {fileID: 1429777017}
+  _pcRam: {fileID: 892786391}
+  _pcAlim: {fileID: 466722196}
 --- !u!1 &2005224268
 GameObject:
   m_ObjectHideFlags: 0
@@ -2319,7 +2356,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -3888481672020999207, guid: 5c4125ecab3584b409c65a9dd00a4958, type: 3}
       propertyPath: m_Name
-      value: PC-centre2
+      value: PC-GPU
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 5c4125ecab3584b409c65a9dd00a4958, type: 3}
       propertyPath: m_RootOrder

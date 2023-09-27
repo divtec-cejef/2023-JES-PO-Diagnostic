@@ -46,7 +46,8 @@ public class Nettoyage : MonoBehaviour
             if (_accompli == 5)
             {
                 _accompli = 0;
-                Button.exitPressés = 0;
+                Button.ExitPressés = 0;
+                CheckPC.CheckCPU = true;
                 SceneManager.LoadScene("8-Tobias-fin");
             }
         }
