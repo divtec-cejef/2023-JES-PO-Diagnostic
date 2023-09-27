@@ -53,6 +53,10 @@ public class Button : MonoBehaviour
             SceneManager.LoadScene(0);
             TypeOfError = null;
             clicExit = 0;
+            CheckPC.CheckCPU = false;
+            CheckPC.CheckGPU = false;
+            CheckPC.CheckRam = false;
+            CheckPC.CheckAlim = false;
         }
     }
     

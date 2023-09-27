@@ -29,7 +29,7 @@ public class main : MonoBehaviour
     private IEnumerator FinDeNiveau()
     {
         yield return new WaitForSeconds(2);
-        
+        CheckPC.CheckAlim = true;
         SceneManager.LoadScene("8-Tobias-fin");
 
     }
