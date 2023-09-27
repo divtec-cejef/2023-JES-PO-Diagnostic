@@ -40,7 +40,7 @@ public class Button : MonoBehaviour
     private IEnumerator Vrai(int scene)
     {
         _animation.Play("reussite_BTN_true");
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         ChangerScene(scene);
     }
     
