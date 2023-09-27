@@ -18,7 +18,6 @@ public class RamDrag : MonoBehaviour
     private IEnumerator FinDeNiveau()
     {
         yield return new WaitForSeconds(1);
-        Button.exitPressés = 0;
         SceneManager.LoadScene("8-Tobias-fin");
 
     }

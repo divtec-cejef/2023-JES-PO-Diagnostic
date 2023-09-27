@@ -30,7 +30,6 @@ public class DetectionFinNiveau : MonoBehaviour
 
     private void finDEtape()
     {
-        Button.exitPressés = 0;
         SceneManager.LoadScene("8-Tobias-fin");
     }
 }

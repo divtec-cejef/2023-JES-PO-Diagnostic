@@ -8,6 +8,7 @@ public class Button : MonoBehaviour
 {
     private static string _gameObjectTag;
     public static string TypeOfError;
+    private int clicExit;
     private Animator _animation;
 
 
@@ -53,8 +54,14 @@ public class Button : MonoBehaviour
     
     public void Exit()
     {
-        SceneManager.LoadScene(0);
-        TypeOfError = null;
+        clicExit++;
+
+        if (clicExit == 2)
+        {
+            SceneManager.LoadScene(0);
+            TypeOfError = null;
+            clicExit = 0;
+        }
     }
     
     public void ActivateError()
