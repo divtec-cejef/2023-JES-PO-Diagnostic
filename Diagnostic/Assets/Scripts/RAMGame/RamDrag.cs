@@ -42,6 +42,7 @@ public class RamDrag : MonoBehaviour
     private void FinAnim()
     {   
         myAnim.Play("ram_ok");        
+        CheckPC.CheckRam = true;
         StartCoroutine(FinDeNiveau());
     }
 }

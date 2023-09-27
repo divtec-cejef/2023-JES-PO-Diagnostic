@@ -40,7 +40,7 @@ public class Button : MonoBehaviour
     private IEnumerator Vrai(int scene)
     {
         _animation.Play("reussite_BTN_true");
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         ChangerScene(scene);
     }
     
@@ -53,6 +53,10 @@ public class Button : MonoBehaviour
             SceneManager.LoadScene(0);
             TypeOfError = null;
             clicExit = 0;
+            CheckPC.CheckCPU = false;
+            CheckPC.CheckGPU = false;
+            CheckPC.CheckRam = false;
+            CheckPC.CheckAlim = false;
         }
     }
     
