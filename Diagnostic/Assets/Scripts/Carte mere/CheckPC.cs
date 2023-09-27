@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CheckPC : MonoBehaviour
 {
@@ -22,6 +23,11 @@ public class CheckPC : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        Debug.Log("CheckPC.Start() CheckCPU = " + CheckCPU);
+        Debug.Log("CheckPC.Start() CheckGPU = " + CheckGPU);
+        Debug.Log("CheckPC.Start() CheckRam = " + CheckRam);
+        Debug.Log("CheckPC.Start() CheckAlim = " + CheckAlim);
+        
         if (CheckCPU)
         {
             _pcCPU.interactable = false;
@@ -44,6 +50,11 @@ public class CheckPC : MonoBehaviour
         {
             _pcAlim.interactable = false;
             Check_Alim.SetActive(true);
+        }
+        
+        if (CheckRam && CheckCPU && CheckGPU && CheckAlim)
+        {
+            SceneManager.LoadScene("9-FinJeu");
         }
     }
 }
