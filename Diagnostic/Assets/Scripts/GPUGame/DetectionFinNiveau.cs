@@ -30,6 +30,7 @@ public class DetectionFinNiveau : MonoBehaviour
 
     private void finDEtape()
     {
+        CkeckPC.CheckGPU = true;
         SceneManager.LoadScene("8-Tobias-fin");
     }
 }

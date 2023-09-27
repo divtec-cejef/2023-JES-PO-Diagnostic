@@ -21,7 +21,6 @@ public class Button : MonoBehaviour
     public void BoutonErreur(int scene)
     {
         var texte = GameObject.Find("Texte tobi").GetComponent<TextMeshProUGUI>();
-        var colorBlock = this.gameObject.GetComponent<Image>();
 
         _animation = gameObject.GetComponent<Animator>();
 
@@ -34,8 +33,6 @@ public class Button : MonoBehaviour
         {
             texte.text = "Réessaye ! \n Clique sur le bon bouton !";
             _animation.Play("Erreur_BTN_false");
-            // StartCoroutine(Faux(colorBlock));
-            
         }
     }
 
@@ -46,11 +43,6 @@ public class Button : MonoBehaviour
         yield return new WaitForSeconds(2);
         ChangerScene(scene);
     }
-
-    // private IEnumerator Faux(Image bouton)
-    // {
-    //    
-    // }
     
     public void Exit()
     {
