@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 public class DetectionFinNiveau : MonoBehaviour
 {
     public static int ObjetsRetires = 0;
-    public GameObject thingToHide;
-    public GameObject thingToShow;
 
     // Update is called once per frame
     void Update()

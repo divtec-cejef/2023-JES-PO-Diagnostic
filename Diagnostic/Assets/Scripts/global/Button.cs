@@ -1,12 +1,14 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Button : MonoBehaviour
 {
     private static string _gameObjectTag;
     public static string TypeOfError;
+    private Animator _animation;
 
 
     public void ChangerScene(int scene)
@@ -18,23 +20,36 @@ public class Button : MonoBehaviour
     public void BoutonErreur(int scene)
     {
         var texte = GameObject.Find("Texte tobi").GetComponent<TextMeshProUGUI>();
-        
-        var gameObjectTag = this.gameObject.tag;
-        
-        Debug.Log("Type Of Error : " + TypeOfError + " tag : " + gameObjectTag);
+        var colorBlock = this.gameObject.GetComponent<Image>();
 
-        if (this.gameObject.CompareTag(TypeOfError)) ;
+        _animation = gameObject.GetComponent<Animator>();
+
+        if (this.gameObject.CompareTag(TypeOfError))
         {
-            ChangerScene(scene);
-        } 
+            texte.text = "Bravo tu as trouvé la bonne erreur !";
+            StartCoroutine(Vrai(scene));
+        }
+        else
+        {
+            texte.text = "Réessaye ! \n Clique sur le bon bouton !";
+            _animation.Play("Erreur_BTN_false");
+            // StartCoroutine(Faux(colorBlock));
+            
+        }
     }
-    
-    IEnumerator Faux(TextMeshProUGUI texte)
+
+    // ReSharper disable Unity.PerformanceAnalysis
+    private IEnumerator Vrai(int scene)
     {
-        texte.text = "Oups tu t'es trompé ce n'est pas le bon composant !";
+        _animation.Play("reussite_BTN_true");
         yield return new WaitForSeconds(2);
-        texte.text = "Réessaye ! \n Clique sur le bon bouton !";
+        ChangerScene(scene);
     }
+
+    // private IEnumerator Faux(Image bouton)
+    // {
+    //    
+    // }
     
     public void Exit()
     {
