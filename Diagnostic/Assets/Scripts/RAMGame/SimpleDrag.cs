@@ -27,7 +27,8 @@ public class SimpleDrag : MonoBehaviour
         
         if (ObjectsMoved == 3)
         {
-            	ramCollider.enabled = true;
+            ramCollider.enabled = true;
+            ObjectsMoved = 0;
         }
     }
 }

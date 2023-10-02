@@ -53,6 +53,7 @@ public class Button : MonoBehaviour
             SceneManager.LoadScene(0);
             TypeOfError = null;
             clicExit = 0;
+            SimpleDrag.ObjectsMoved = 0;
             CheckPC.CheckCPU = false;
             CheckPC.CheckGPU = false;
             CheckPC.CheckRam = false;
