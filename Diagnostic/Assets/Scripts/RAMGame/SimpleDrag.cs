@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SimpleDrag : MonoBehaviour
@@ -8,11 +6,17 @@ public class SimpleDrag : MonoBehaviour
     private Collider2D ramCollider;
     static public int ObjectsMoved = 0;
     // Start is called before the first frame update
+    /**
+     * Récupère le collider du RAM
+     */
     void Start()
     {
         ramCollider = ram.GetComponent<Collider2D>();
     }
 
+    /**
+     * Déplace l'objet
+     */
     private void OnMouseDrag()
     {
         // mouse position to world point
@@ -21,6 +25,9 @@ public class SimpleDrag : MonoBehaviour
         transform.position = newPosition;
     }
 
+    /**
+     * Si plus de trois objets est déplacé on peut déplacer la RAM
+     */
     private void OnMouseUp()
     {
         ObjectsMoved++;
