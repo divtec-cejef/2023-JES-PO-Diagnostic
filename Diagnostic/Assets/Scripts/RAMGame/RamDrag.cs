@@ -1,20 +1,24 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class RamDrag : MonoBehaviour
 {
-    public GameObject Game;
-    public GameObject FinNiv;
-    public GameObject Ram;
-    private Animator myAnim;
+    public GameObject ram;
+    private Animator _myAnim;
 
+    /**
+     * Caputeur l'animateur de la RAM
+     */
     private void Start()
     {
-        myAnim = Ram.GetComponent<Animator>();
+        _myAnim = ram.GetComponent<Animator>();
     }
 
+    /**
+     * Coroutine qui lance la scène de fin
+     */
     private IEnumerator FinDeNiveau()
     {
         yield return new WaitForSeconds(1);
@@ -23,6 +27,9 @@ public class RamDrag : MonoBehaviour
 
     }
 
+    /**
+     * Garde la RAM sur l'axe z à 0
+     */
     private void OnMouseDrag()
     {
         // mouse position to world point
@@ -31,17 +38,23 @@ public class RamDrag : MonoBehaviour
         transform.position = newPosition;
     }
 
+    /**
+     * Si la RAM est sur la carte mère, on lance l'animation
+     */
     private void OnMouseUp()
     {
         if (DetectRam.OnMotherboard)
         {
-            myAnim.enabled = true;
+            _myAnim.enabled = true;
         }
     }
 
+    /**
+     * Lance l'animation de la RAM
+     */
     private void FinAnim()
     {   
-        myAnim.Play("ram_ok");        
+        _myAnim.Play("ram_ok");        
         CheckPC.CheckRam = true;
         StartCoroutine(FinDeNiveau());
     }

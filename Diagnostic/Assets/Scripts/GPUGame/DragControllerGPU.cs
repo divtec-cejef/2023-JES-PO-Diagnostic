@@ -54,8 +54,8 @@ public class DragControllerGPU : MonoBehaviour
         {
             return;
         }
-
-        if (Camera.main != null) _worldPosition = Camera.main.ScreenToWorldPoint(_screenPosition);
+        
+        if (null != Camera.main) _worldPosition = Camera.main.ScreenToWorldPoint(_screenPosition);
 
         if (IsDragActive)
         {
@@ -80,6 +80,9 @@ public class DragControllerGPU : MonoBehaviour
         }
     }
 
+    /**
+     * Initialise le drag
+     */
     private void InitDrag()
     {
         var transform1 = lastDragged.transform;
@@ -88,13 +91,19 @@ public class DragControllerGPU : MonoBehaviour
         lastDragged.GetComponent<SpriteRenderer>().sortingOrder = 35;
     }
 
+    /**
+     * Déplace l'objet
+     */
     private void Drag()
     {
         lastDragged.transform.position = new Vector3(_worldPosition.x - 1, _worldPosition.y + 1, 0f);
     }
 
-    public static bool FinDrag = false;
+    private const bool FinDrag = false;
 
+    /**
+     * Dépose l'objet
+     */
     private void Drop()
     {
         IsDragActive = false;

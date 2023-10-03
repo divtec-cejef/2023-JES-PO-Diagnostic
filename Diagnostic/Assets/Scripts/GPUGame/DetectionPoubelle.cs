@@ -2,12 +2,13 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Android;
+using UnityEngine.Serialization;
 
 
 public class DetectionPoubelle : MonoBehaviour
 {
     private GameObject _hand;
-    public GameObject _tobiasTexteGameObject;
+    public GameObject tobiasTexteGameObject;
     public GameObject banane;
     public GameObject amongus;
     public GameObject cable;
@@ -19,7 +20,7 @@ public class DetectionPoubelle : MonoBehaviour
     public void Start()
     {
         _hand = GameObject.Find("hand_tuto");
-        _tobiasTexte = _tobiasTexteGameObject.GetComponent<TextMeshProUGUI>();
+        _tobiasTexte = tobiasTexteGameObject.GetComponent<TextMeshProUGUI>();
     }
 
     public void OnTriggerStay2D(Collider2D collision)

@@ -12,12 +12,18 @@ public class DragController : MonoBehaviour
     private float _x;
     private float _y;
     
+    /**
+     * Initialise les variables
+     */
     private void Start()
     {
         _dragController = FindObjectOfType<DragController>();
         _draggable = FindObjectOfType<Draggable>();
     }
 
+    /**
+     * Permet de ne pas avoir plusieurs DragController
+     */
     void Awake()
     {
         DragController[] dragControllers = FindObjectsOfType<DragController>();
@@ -31,7 +37,7 @@ public class DragController : MonoBehaviour
     /**
     * Permet de déplacer un objet en le touchant
     */
-    void Update()
+    private void Update()
     {
         if (_isDragActive)
         {
@@ -81,6 +87,9 @@ public class DragController : MonoBehaviour
         }
     }
 
+    /**
+     * Initialise le drag
+     */
     private void InitDrag()
     {
         var transform1 = lastDragged.transform;
@@ -89,13 +98,19 @@ public class DragController : MonoBehaviour
         transform1.localScale = new Vector3(_x * 2f, _y * 2f, 0f);   
     }
 
+    /**
+     * Déplace l'objet
+     */
     private void Drag()
     {
         lastDragged.transform.position = new Vector3(_worldPosition.x - 1, _worldPosition.y + 1, 0f);
     }
 
-    public static bool FinDrag = false;
+    private const bool FinDrag = false;
 
+    /**
+     * Dépose l'objet
+     */
     private void Drop()
     {
         _isDragActive = false;

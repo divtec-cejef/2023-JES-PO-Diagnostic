@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlaceCutter : MonoBehaviour
@@ -10,6 +8,9 @@ public class PlaceCutter : MonoBehaviour
     public GameObject cutChecker;
     public GameObject endTuto;
 
+    /**
+     * Place le cutter
+     */
     public void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Collision3");

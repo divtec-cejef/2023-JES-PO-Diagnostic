@@ -11,19 +11,21 @@ public class CpuMiniGame : MonoBehaviour
     public GameObject objectPrefab; // Le prefab du GameObject à instancier
     public GameObject spawnAreaCenter; // Le centre de la zone de spawn
     public GameObject cpu; // Le GameObject à activer
-    public GameObject listePoussieres;
-    public GameObject handTutorial;
-    
-    private readonly List<GameObject> _activateList = new List<GameObject>();
+    public GameObject listePoussieres; // La liste des poussière instanciées
+    public GameObject handTutorial; // La main du tutoriel
 
+    private readonly List<GameObject> _activateList; // La liste des GameObject à activer
 
+    /**
+     * Constructeur
+     */
     private void Start()
     {
         _spawnAreaSize = new Vector3(3f, 3f);
         _activateList.Add(cpu);
         _activateList.Add(handTutorial);
         
-        Nettoyage.handTutorial = handTutorial;
+        Nettoyage.HandTutorial = handTutorial;
         
         foreach (var a in _activateList)
         {
