@@ -25,7 +25,7 @@ public class CpuMiniGame : MonoBehaviour
         _activateList.Add(cpu);
         _activateList.Add(handTutorial);
         
-        Nettoyage.handTutorial = handTutorial;
+        Nettoyage.HandTutorial = handTutorial;
         
         foreach (var a in _activateList)
         {

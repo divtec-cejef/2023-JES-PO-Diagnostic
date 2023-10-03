@@ -6,6 +6,9 @@ public class LeSavaisTu : MonoBehaviour
     
     public GameObject bulle;
 
+    /**
+     * Selon l'erreur, un texte pour le "Le savais tu" adapté s'affiche
+     */
     private void Start()
     {
         var helloWorld = bulle.GetComponent<TextMeshProUGUI>();

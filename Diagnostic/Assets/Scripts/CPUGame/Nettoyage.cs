@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class Nettoyage : MonoBehaviour
 {
@@ -9,7 +8,7 @@ public class Nettoyage : MonoBehaviour
     private Material _spriteMaterial;
     private Color _targetColor;
     private Color _originalColor;
-    public static GameObject handTutorial;
+    public static GameObject HandTutorial;
     private const int NbreAEffacé = 5;
 
     /**
@@ -55,7 +54,7 @@ public class Nettoyage : MonoBehaviour
         }
         
         _spriteMaterial.color = _originalColor;
-        if (handTutorial.activeSelf == false) return;
-        handTutorial.SetActive(false);
+        if (HandTutorial.activeSelf == false) return;
+        HandTutorial.SetActive(false);
     }
 }
