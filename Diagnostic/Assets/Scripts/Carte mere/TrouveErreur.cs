@@ -6,8 +6,7 @@ public class TrouveErreur : MonoBehaviour
     public GameObject gpuError;
     public GameObject ramError;
     public GameObject alimError;
-    public static int NumScene = 0;
-    
+
     /**
      * Selon la valeur fournie active l'erreur sur la carte mère
      */
@@ -28,6 +27,5 @@ public class TrouveErreur : MonoBehaviour
                 alimError.SetActive(true);
                 break;
         }
-
     }
 }

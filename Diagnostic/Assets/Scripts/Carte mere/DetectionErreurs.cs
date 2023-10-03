@@ -1,8 +1,4 @@
-
-using System;
-using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class DetectionErreurs : MonoBehaviour
 {
@@ -12,6 +8,9 @@ public class DetectionErreurs : MonoBehaviour
     public GameObject ram;
     private bool _erreurTrouve;
 
+    /**
+     * Detecte si le joueur a trouvé l'erreur et affiche les composants
+     */
     private void Update()
     {
         if (Input.GetMouseButtonUp(0) && _erreurTrouve || Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Ended && _erreurTrouve)
@@ -21,6 +20,9 @@ public class DetectionErreurs : MonoBehaviour
     }
     
     // ReSharper disable Unity.PerformanceAnalysis
+    /**
+     * Affiche les boutons de choix de l'erreur
+     */
     private void ErreurTrouve()
     {
         cpu.SetActive(true);
@@ -29,6 +31,9 @@ public class DetectionErreurs : MonoBehaviour
         alim.SetActive(true);
     }
 
+    /**
+     * Lors de la collision de l'erreur avec la loupe, l'erreur est trouvée et la variable est mise à true
+     */
     private void OnTriggerEnter2D(Collider2D other)
     {
         _erreurTrouve = true;
