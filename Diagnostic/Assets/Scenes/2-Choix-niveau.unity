@@ -235,10 +235,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1389117717}
-  - {fileID: 734220679}
-  - {fileID: 369756372}
   - {fileID: 1681819345}
+  - {fileID: 734220679}
+  - {fileID: 1389117717}
+  - {fileID: 369756372}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -502,7 +502,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: e14332be76c7f5c4797b0dd142f86ec9, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: e14332be76c7f5c4797b0dd142f86ec9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1949,7 +1949,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: e14332be76c7f5c4797b0dd142f86ec9, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: e14332be76c7f5c4797b0dd142f86ec9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2389,7 +2389,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: e14332be76c7f5c4797b0dd142f86ec9, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: e14332be76c7f5c4797b0dd142f86ec9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2574,14 +2574,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3fb57551b75cbc4e98bbd3d3afd4569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Check_CPU: {fileID: 1681819346}
-  Check_GPU: {fileID: 734220680}
-  Check_RAM: {fileID: 1389117718}
-  Check_Alim: {fileID: 369756371}
-  _pcCPU: {fileID: 1530168970}
-  _pcGPU: {fileID: 539781941}
-  _pcRam: {fileID: 980775234}
-  _pcAlim: {fileID: 584434279}
+  checkCPU: {fileID: 1681819346}
+  checkGPU: {fileID: 734220680}
+  checkRam: {fileID: 1389117718}
+  checkAlim: {fileID: 369756371}
+  pcCPU: {fileID: 1530168970}
+  pcGPU: {fileID: 539781941}
+  pcRam: {fileID: 980775234}
+  pcAlim: {fileID: 584434279}
 --- !u!1 &2005224268
 GameObject:
   m_ObjectHideFlags: 0

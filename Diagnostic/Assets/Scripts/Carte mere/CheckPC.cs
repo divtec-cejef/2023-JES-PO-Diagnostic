@@ -24,6 +24,7 @@ public class CheckPC : MonoBehaviour
      */
     private void Start()
     {
+        Debug.Log("CheckGPU" + CheckGPU + " CheckCPU" + CheckCPU + " CheckRam" + CheckRam + " CheckAlim" + CheckAlim);
         if (CheckCPU)
         {
             pcCPU.interactable = false;
@@ -38,6 +39,7 @@ public class CheckPC : MonoBehaviour
 
         if (CheckRam)
         {
+            Debug.Log("PC RAM CHECKED");
             pcRam.interactable = false;
             checkRam.SetActive(true);
         }
