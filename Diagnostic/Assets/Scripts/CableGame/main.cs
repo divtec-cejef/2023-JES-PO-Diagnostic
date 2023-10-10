@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class main : MonoBehaviour
 {
@@ -16,14 +17,8 @@ public class main : MonoBehaviour
 
     private IEnumerator FinDeNiveau()
     {
-<<<<<<< Updated upstream
-        yield return new WaitForSeconds(1);
-        Game.SetActive(false);
-        finNiv.SetActive(true);
-=======
         yield return new WaitForSeconds(2);
         SceneManager.LoadScene("8-Tobias-fin");
->>>>>>> Stashed changes
 
     }
     public void OnCableOn(int points)
