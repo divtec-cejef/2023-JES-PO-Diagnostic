@@ -2729,7 +2729,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numCables: 4
-<<<<<<< Updated upstream
   Game: {fileID: 1649318296}
   winText: {fileID: 1769670111}
   finNiv: {fileID: 1161129660}
@@ -3009,8 +3008,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8742538545776668643, guid: 9916994387bcb1c4dbf5e1b6a763232f, type: 3}
   m_PrefabInstance: {fileID: 447298652}
   m_PrefabAsset: {fileID: 0}
-=======
->>>>>>> Stashed changes
 --- !u!1001 &1963839988
 PrefabInstance:
   m_ObjectHideFlags: 0
